@@ -31,3 +31,11 @@ Review the GitHub issues labeled as "bug" and "help wanted." These are available
 
 Browse the GitHub issues related to features. Any item labeled as "enhancement" and "help wanted" is available for implementation by anyone interested.
 
+### Documentation
+
+Your project could benefit from additional documentation, whether integrated into the official documentation, included in docstrings, or shared through various platforms such as blog posts and articles.
+
+
+
+
+
