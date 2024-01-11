@@ -1,6 +1,6 @@
 def pexp(x, rate, output_image=False):
     """
-    Calculates the exponential distribution cumulative probability for a given value.
+    Calculates the exponential distribution cumulative probability for a given value and plots the corresponding distribution
 
     Parameters:
     - x (float): The quantile at which to calculate the cumulative probability.
