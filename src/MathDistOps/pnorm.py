@@ -26,6 +26,32 @@ def pnorm(x, mean=0, std_dev=1, plot_graph=True):
     >>> pnorm(1, mean=0, std_dev=1)
     0.8413447460685429
 
+    Graph:
+    - The blue curve represents the normal distribution CDF for the given parameters.
+    - The vertical red line corresponds to the specified value `x`.
+
+    Example Usage:
+    ```python
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    x_values = np.linspace(-3, 3, 100)
+    cdf_values = [pnorm(x, mean=0, std_dev=1, plot_graph=False) for x in x_values]
+
+    plt.plot(x_values, cdf_values, label='CDF')
+    plt.axvline(x=1, color='red', linestyle='--', label='x = 1')
+    plt.title('Normal Distribution CDF')
+    plt.xlabel('Value (x)')
+    plt.ylabel('Cumulative Probability')
+    plt.legend()
+    plt.show()
+    '''
+
+
+
+
+
+
 
 
     """
