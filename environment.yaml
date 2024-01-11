@@ -1,0 +1,15 @@
+name: pycounts
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - cookiecutter
+  - altair
+  - scipy.stats
+  - pytest
+  - matplotlib.pyplot
+  - math
+  - pandas
+  - numpy 
+prefix: /Users/sandragross/miniconda3/envs/pycounts
