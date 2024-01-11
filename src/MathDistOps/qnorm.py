@@ -25,6 +25,13 @@ def qnorm(p, mean=0, std_dev=1, plot_graph=True):
     falls. It is characterized by the mean (`μ`) and standard deviation (`σ`), determining
     the center and spread of the distribution.
 
+    Example
+    -------
+    >>> qnorm(0.8413447460685429, mean=0, std_dev=1)
+    1.0
+
+    
+
 
 
     """
