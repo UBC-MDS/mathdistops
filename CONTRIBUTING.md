@@ -1,4 +1,4 @@
-## Contributing
+## Contributing (External)
 
 Welcome to our project! We appreciate your interest in contributing.
 
@@ -77,6 +77,9 @@ Before you submit a pull request, check that it meets these guidelines:
 ### Code of Conduct
 Please note that the MathDistOps project is released with this Contributor Code of Conduct. By contributing to this project, you agree to abide by its terms.
 
+## Contributing (Internal)
+
+We build several branches to store functions and a bunch of files like contributing, contributor, readme. If we have issues, will pull it on the github. Some issues come from conflict, some come from code review, like formats. Comments for each pull requests can improve contribution. Team members have different roles which can make pipeline clearly. coomunication through github and weekly meetings also make great improvment to the whole project. 
 
 
 
