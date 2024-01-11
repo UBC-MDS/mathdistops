@@ -21,6 +21,10 @@ def qnorm(p, mean=0, std_dev=1, plot_graph=True):
     -------
     Q(p; μ, σ) = μ + σ * sqrt(2) * erfinv(2p - 1)
 
+    The quantile represents the value below which a given proportion of the distribution
+    falls. It is characterized by the mean (`μ`) and standard deviation (`σ`), determining
+    the center and spread of the distribution.
+
 
 
     """
