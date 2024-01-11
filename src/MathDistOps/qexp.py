@@ -1,6 +1,6 @@
 def qexp(p, rate, output_image=False):
     """
-    Calculates the quantile corresponding to given cumulative probability in an exponential distribution.
+    Calculates the quantile corresponding to given cumulative probability in an exponential distribution and plots the corresponding distribution.
 
     Parameters:
     - p (float): The cumulative probability for which to find the quantile.
