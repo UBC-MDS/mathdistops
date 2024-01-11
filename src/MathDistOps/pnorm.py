@@ -38,7 +38,7 @@ def pnorm(x, mean=0, std_dev=1, plot_graph=True):
     0.8413447460685429
 
     Graph
-    --------
+    -----
     The blue curve represents the normal distribution CDF for the given parameters.
     The vertical red line corresponds to the specified value `x`.
 
