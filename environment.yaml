@@ -1,15 +1,14 @@
-name: pycounts
+name: mathdistops
 channels:
   - conda-forge
   - defaults
 dependencies:
   - python=3.9
-  - cookiecutter
-  - altair
-  - scipy.stats
-  - pytest
-  - matplotlib.pyplot
-  - math
-  - pandas
-  - numpy 
+  - numpy=1.25.2  
+  - cookiecutter=2.5.0 
+  - altair=5.2.0
+  - scipy=1.11.4
+  - pytest=7.4.4
+  - matplotlib=3.8.2
+  - pandas=2.1.4 
 prefix: /Users/sandragross/miniconda3/envs/pycounts
