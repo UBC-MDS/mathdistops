@@ -44,6 +44,14 @@ def qnorm(p, mean=0, std_dev=1, plot_graph=True):
     p_values = np.linspace(0, 1, 100)
     quantile_values = [qnorm(p, mean=0, std_dev=1, plot_graph=False) for p in p_values]
 
+    plt.plot(p_values, quantile_values, label='Quantile')
+    plt.axhline(y=1, color='red', linestyle='--', label='p = 0.8413')
+    plt.title('Normal Distribution Quantile')
+    plt.xlabel('Probability (p)')
+    plt.ylabel('Value (Quantile)')
+    plt.legend()
+    plt.show()
+    ```
 
 
     """
