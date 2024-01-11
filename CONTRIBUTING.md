@@ -11,19 +11,27 @@ You can contribute in many ways:
 - Clone the forked repository to your local machine.
 
 - Install your local copy with Poetry, this is how you set up your fork for local development:
-    
-cd MathDistOps/
-poetry install
+
+    '''  
+    cd MathDistOps/
+    poetry install
+    '''
 
 - Create a new branch for your changes: 'git checkout -b feature/new-feature'.
 
 - Make your changes, check that your changes pass the tests by running pytest.
-poetry run pytest
+
+    '''
+    poetry run pytest
+    '''
 
 - Commit and push your changes to your forked repository
-git add .
-git commit -m "Your detailed description of your changes."
-git push origin name-of-your-bugfix-or-feature
+
+    '''
+    git add .
+    git commit -m "Your detailed description of your changes."
+    git push origin name-of-your-bugfix-or-feature
+    '''
 
 - Open a pull request from your forked repository to the original repository.
 
