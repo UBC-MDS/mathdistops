@@ -52,6 +52,10 @@ def qnorm(p, mean=0, std_dev=1, plot_graph=True):
     plt.legend()
     plt.show()
     ```
+    Warning:
+    The quantile function involves the inverse of the error function (erfinv), and its
+    application may lead to undefined values or errors for extreme probabilities.
+    """
 
 
     """
