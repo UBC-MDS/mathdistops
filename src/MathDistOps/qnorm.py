@@ -30,7 +30,11 @@ def qnorm(p, mean=0, std_dev=1, plot_graph=True):
     >>> qnorm(0.8413447460685429, mean=0, std_dev=1)
     1.0
 
-    
+    Graph
+    -----
+    - The blue curve represents the normal distribution quantile for the given parameters.
+    - The horizontal red line corresponds to the specified probability `p`.
+
 
 
 
