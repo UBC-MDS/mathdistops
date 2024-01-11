@@ -62,6 +62,8 @@ Before you submit a pull request, check that it meets these guidelines:
 3. Confirm that the pull request functions correctly for both Python 3.7 and 3.8. Verify the status of the tests for all supported Python versions by checking https://github.com/UBC-MDS/MathDistOps/issues.
 
 
+### Code of Conduct
+Please note that the MathDistOps project is released with this Contributor Code of Conduct. By contributing to this project, you agree to abide by its terms.
 
 
 
