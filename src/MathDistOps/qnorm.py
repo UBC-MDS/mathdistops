@@ -17,6 +17,10 @@ def qnorm(p, mean=0, std_dev=1, plot_graph=True):
     -------
     float: The value at which the cumulative probability is less than or equal to `p`.
 
+    Formula
+    -------
+    Q(p; μ, σ) = μ + σ * sqrt(2) * erfinv(2p - 1)
+
 
 
     """
