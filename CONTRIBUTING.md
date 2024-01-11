@@ -49,3 +49,8 @@ Browse the GitHub issues related to features. Any item labeled as "enhancement" 
 
 Your project could benefit from additional documentation, whether integrated into the official documentation, included in docstrings, or shared through various platforms such as blog posts and articles.
 
+### Feedback
+
+The best way to send feedback is to file an issue at https://github.com/UBC-MDS/MathDistOps/issues.
+
+
