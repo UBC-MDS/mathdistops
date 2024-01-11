@@ -22,3 +22,8 @@ When reporting a bug, kindly provide:
 - The name and version of your operating system.
 - Any pertinent details about your local setup that could aid in troubleshooting.
 - Clear and detailed steps to replicate the bug.
+
+### Resolving Bugs
+
+Review the GitHub issues labeled as "bug" and "help wanted." These are available for anyone interested in addressing and implementing solutions.
+
