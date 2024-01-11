@@ -46,6 +46,10 @@ def pnorm(x, mean=0, std_dev=1, plot_graph=True):
     plt.legend()
     plt.show()
     '''
+    
+    Warning:
+    The CDF is a continuous probability distribution function, and the area under
+    the curve represents the probability of the variable falling below a certain value.
 
 
 
