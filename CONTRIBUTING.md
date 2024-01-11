@@ -1,73 +1,70 @@
-# Contributing
+## Contributing
 
-Contributions are welcome, and they are greatly appreciated! Every little bit
-helps, and credit will always be given.
+Welcome to our project! We appreciate your interest in contributing.
 
-## Types of Contributions
+You can contribute in many ways:
+
+### How to Contribute
+
+- Fork the 'MathDistOps' repository.
+
+- Clone the forked repository to your local machine.
+
+- Install your local copy with Poetry, this is how you set up your fork for local development:
+    
+cd MathDistOps/
+poetry install
+
+- Create a new branch for your changes: 'git checkout -b feature/new-feature'.
+
+- Make your changes, check that your changes pass the tests by running pytest.
+poetry run pytest
+
+- Commit and push your changes to your forked repository
+git add .
+git commit -m "Your detailed description of your changes."
+git push origin name-of-your-bugfix-or-feature
+
+- Open a pull request from your forked repository to the original repository.
 
 ### Report Bugs
 
-If you are reporting a bug, please include:
+Please submit bug reports on our GitHub repository at https://github.com/UBC-MDS/MathDistOps/issues.
 
-* Your operating system name and version.
-* Any details about your local setup that might be helpful in troubleshooting.
-* Detailed steps to reproduce the bug.
+When reporting a bug, kindly provide:
 
-### Fix Bugs
+- The name and version of your operating system.
+- Any pertinent details about your local setup that could aid in troubleshooting.
+- Clear and detailed steps to replicate the bug.
 
-Look through the GitHub issues for bugs. Anything tagged with "bug" and "help
-wanted" is open to whoever wants to implement it.
+### Resolving Bugs
 
-### Implement Features
+Review the GitHub issues labeled as "bug" and "help wanted." These are available for anyone interested in addressing and implementing solutions.
 
-Look through the GitHub issues for features. Anything tagged with "enhancement"
-and "help wanted" is open to whoever wants to implement it.
+### Implementing Features
 
-### Write Documentation
+Browse the GitHub issues related to features. Any item labeled as "enhancement" and "help wanted" is available for implementation by anyone interested.
 
-You can never have enough documentation! Please feel free to contribute to any
-part of the documentation, such as the official docs, docstrings, or even
-on the web in blog posts, articles, and such.
+### Documentation
 
-### Submit Feedback
+Your project could benefit from additional documentation, whether integrated into the official documentation, included in docstrings, or shared through various platforms such as blog posts and articles.
 
-If you are proposing a feature:
+### Feedback
 
-* Explain in detail how it would work.
-* Keep the scope as narrow as possible, to make it easier to implement.
-* Remember that this is a volunteer-driven project, and that contributions
-  are welcome :)
+The best way to send feedback is to file an issue at https://github.com/UBC-MDS/MathDistOps/issues.
 
-## Get Started!
 
-Ready to contribute? Here's how to set up `mathdistops` for local development.
-
-1. Download a copy of `mathdistops` locally.
-2. Install `mathdistops` using `poetry`:
-
-    ```console
-    $ poetry install
-    ```
-
-3. Use `git` (or similar) to create a branch for local development and make your changes:
-
-    ```console
-    $ git checkout -b name-of-your-bugfix-or-feature
-    ```
-
-4. When you're done making changes, check that your changes conform to any code formatting requirements and pass any tests.
-
-5. Commit your changes and open a pull request.
-
-## Pull Request Guidelines
-
+### Pull Request Guidelines
 Before you submit a pull request, check that it meets these guidelines:
 
-1. The pull request should include additional tests if appropriate.
-2. If the pull request adds functionality, the docs should be updated.
-3. The pull request should work for all currently supported operating systems and versions of Python.
+1. Ensure that the pull request incorporates testing.
+2. If the pull request introduces new features, it is essential to update the documentation. Place the new functionality within a function accompanied by a docstring, and include details about the feature in the README.md list.
+3. Confirm that the pull request functions correctly for both Python 3.7 and 3.8. Verify the status of the tests for all supported Python versions by checking https://github.com/UBC-MDS/MathDistOps/issues.
 
-## Code of Conduct
 
-Please note that the `mathdistops` project is released with a
-Code of Conduct. By contributing to this project you agree to abide by its terms.
+### Code of Conduct
+Please note that the MathDistOps project is released with this Contributor Code of Conduct. By contributing to this project, you agree to abide by its terms.
+
+
+
+
