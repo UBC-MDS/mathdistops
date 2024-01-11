@@ -27,3 +27,7 @@ When reporting a bug, kindly provide:
 
 Review the GitHub issues labeled as "bug" and "help wanted." These are available for anyone interested in addressing and implementing solutions.
 
+### Implementing Features
+
+Browse the GitHub issues related to features. Any item labeled as "enhancement" and "help wanted" is available for implementation by anyone interested.
+
