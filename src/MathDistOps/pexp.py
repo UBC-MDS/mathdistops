@@ -1,19 +1,36 @@
 def pexp(x, rate, output_image=False):
     """
-    Calculates the exponential distribution cumulative probability for a given value.
+    Calculate the exponential distribution cumulative probability for a given value and plots the corresponding distribution.
 
-    Parameters:
-    - x (float): The quantile at which to calculate the cumulative probability.
-    - rate (float): The rate parameter (lambda) of the exponential distribution.
-    - output_image (bool, optional): If True, generates and returns a plot of the exponential 
-      distribution with the cumulative probability highlighted for the given quantile. Default is False.
+    This function computes the cumulative probability at a specified quantile `x` for an exponential
+    distribution with a given rate parameter `lambda`. Optionally, it can generate and return a visualization
+    of the distribution.
 
-    Returns:
-    - float: Cumulative probability for the given quantile.
-    - matplotlib.figure.Figure (optional): A plot of the exponential distribution if output_image is True.
+    Parameters
+    ----------
+    x : float
+        The quantile at which to calculate the cumulative probability. Must be a non-negative number.
+    rate : float
+        The rate parameter (`lambda`) of the exponential distribution. Must be a positive number.
+    output_image : bool, optional
+        If True, generates and returns a plot of the exponential distribution with the cumulative probability
+        highlighted for the given quantile. Default is False.
 
-    Example:
+    Returns
+    -------
+    float
+        Cumulative probability for the given quantile.
+    matplotlib.figure.Figure or None
+        A plot of the exponential distribution if `output_image` is True. Otherwise, None.
+
+    Examples
+    --------
     >>> pexp(0.5, rate=1, output_image=True)
-    (0.3934693402873666, <Figure ...>)
+    (0.3934693402873666, [Matplotlib Figure Object])
+
+    Notes
+    -----
+    The function will raise a ValueError if `x` is negative or `rate` is non-positive.
     """
-    pass  # To be implemented
+    pass  # Function implementation goes here
+
