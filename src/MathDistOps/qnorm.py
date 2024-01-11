@@ -35,6 +35,14 @@ def qnorm(p, mean=0, std_dev=1, plot_graph=True):
     - The blue curve represents the normal distribution quantile for the given parameters.
     - The horizontal red line corresponds to the specified probability `p`.
 
+    Example Usage
+    -------------
+    ```python
+    import matplotlib.pyplot as plt
+    import numpy as np
+
+    p_values = np.linspace(0, 1, 100)
+    quantile_values = [qnorm(p, mean=0, std_dev=1, plot_graph=False) for p in p_values]
 
 
 
