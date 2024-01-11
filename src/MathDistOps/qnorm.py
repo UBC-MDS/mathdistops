@@ -13,6 +13,10 @@ def qnorm(p, mean=0, std_dev=1, plot_graph=True):
     - std_dev (float, optional): The standard deviation of the normal distribution. Default is 1.
     - plot_graph (bool, optional): Whether to plot the quantile graph. Default is True.
 
+    Returns
+    -------
+    float: The value at which the cumulative probability is less than or equal to `p`.
+
 
 
     """
