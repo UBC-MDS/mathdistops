@@ -22,7 +22,9 @@ def pnorm(x, mean=0, std_dev=1, plot_graph=True):
     is less than or equal to a specified value `x`. It is characterized by the mean (`μ`)
     and standard deviation (`σ`), determining the center and spread of the distribution.
 
-    
+    Example:
+    >>> pnorm(1, mean=0, std_dev=1)
+    0.8413447460685429
 
 
 
