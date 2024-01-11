@@ -54,3 +54,15 @@ Your project could benefit from additional documentation, whether integrated int
 The best way to send feedback is to file an issue at https://github.com/UBC-MDS/MathDistOps/issues.
 
 
+### Pull Request Guidelines
+Before you submit a pull request, check that it meets these guidelines:
+
+1. Ensure that the pull request incorporates testing.
+2. If the pull request introduces new features, it is essential to update the documentation. Place the new functionality within a function accompanied by a docstring, and include details about the feature in the README.md list.
+3. Confirm that the pull request functions correctly for both Python 3.7 and 3.8. Verify the status of the tests for all supported Python versions by checking https://github.com/UBC-MDS/MathDistOps/issues.
+
+
+
+
+
+
