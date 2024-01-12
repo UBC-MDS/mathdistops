@@ -47,7 +47,7 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`mathdistops` was created by Ziwei Chen, Kun Ya, Sivakorn Oak Chong, Sandra Gross. It is licensed under the terms of the MIT license.
+`mathdistops` was created by Katherine Chen, Kun Ya, Oak Chong, Sandra Gross. It is licensed under the terms of the MIT license.
 
 ## Credits
 
