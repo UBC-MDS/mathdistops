@@ -81,5 +81,6 @@ Please note that the MathDistOps project is released with this Contributor Code 
 
 We build several branches to store functions and a bunch of files like contributing, contributor, readme. If we have issues, will pull it on the github. Some issues come from conflict, some come from code review, like formats. Comments for each pull requests can improve contribution. Team members have different roles which can make pipeline clearly. coomunication through github and weekly meetings also make great improvment to the whole project. 
 
+ref: Inspried by Tiffany's example: https://github.com/ttimbers/convertempPy/blob/master/CONTRIBUTING.md
 
 
