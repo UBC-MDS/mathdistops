@@ -8,5 +8,5 @@
 
 ### Added 🚀
 - Set up project structure [commit 85d03c4](https://github.com/UBC-MDS/mathdistops/commit/85d03c48e6c40e6c847fa62cb253ea741ba9007d)
-- Wrote function documentation for [pexp](https://github.com/UBC-MDS/mathdistops/commit/b2bcb9e65ce584b8b95b859ddbcfbde18b8714db), [qexp](https://github.com/UBC-MDS/mathdistops/commit/69c1e85b38c34209ad840f706755790557e94881(, [qnorm](https://github.com/UBC-MDS/mathdistops/commit/3166bf337375eee1829c5b30efc176f39188c7d5), [pnorm](https://github.com/UBC-MDS/mathdistops/commit/3166bf337375eee1829c5b30efc176f39188c7d5)
+- Wrote function documentation for [pexp](https://github.com/UBC-MDS/mathdistops/commit/b2bcb9e65ce584b8b95b859ddbcfbde18b8714db), [qexp](https://github.com/UBC-MDS/mathdistops/commit/69c1e85b38c34209ad840f706755790557e94881), [qnorm](https://github.com/UBC-MDS/mathdistops/commit/3166bf337375eee1829c5b30efc176f39188c7d5), [pnorm](https://github.com/UBC-MDS/mathdistops/commit/3166bf337375eee1829c5b30efc176f39188c7d5)
 - Created [README](https://github.com/UBC-MDS/mathdistops/commit/0cd1c468e883f2afba0c69c43a9f1ffa57341f0f), [Contributing.md](https://github.com/UBC-MDS/mathdistops/commit/6832d2c5006c84204edb0c4195e4e7f2cece68ad), 
