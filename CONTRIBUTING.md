@@ -54,18 +54,18 @@ The best way to send feedback is to file an issue at https://github.com/UBC-MDS/
 
 ### Get started!
 
-- Fork the 'MathDistOps' repository.
+- Fork the 'mathdistops' repository.
 
 - Clone the forked repository to your local machine.
   
 	```
-	git clone git@github.com:UBC-MDS/MathDistOps.git
+	git clone git@github.com:UBC-MDS/mathdistops.git
 	```
 
 - Install your local copy with Poetry, this is how you set up your fork for local development:
 
     ``` 
-    cd MathDistOps/
+    cd mathdistops/
     poetry install
     ```
 
