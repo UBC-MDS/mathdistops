@@ -1,3 +1,23 @@
+# Contribution
+
+## Contributing (Internal)
+
+### Issues
+Each issue represents a task and needs to be assigned to at least one team member. Additionally, issues should be properly labeled and added to the corresponding milestone.
+
+GitHub Issues are not only used for task assignment but also serve as a platform for team communication.
+
+### Internal Organization
+Each week a milestone is created, specifying all relevant tasks in the form of issues. 
+These issues are listed on the project board. Each team member is responsible for updating their progress on this board and ensuring that their assigned tasks are completed by the deadline of the milestone.
+
+### Internal Pipeline
+Our internal pipeline for contribution goes as follows: 
+1. After a stand-up meeting, issues are collected and raised on the project board. 
+2. A new branch is created for each issue for work to be done. 
+3. A Pull request is raised once work is completed. An approval from another team member (a reviewer) is required before merging to main. 
+
+
 ## Contributing (External)
 
 Welcome to our project! We appreciate your interest in contributing.
@@ -11,7 +31,7 @@ You can contribute in many ways:
 - Clone the forked repository to your local machine.
   
 	```
-	git@github.com:UBC-MDS/MathDistOps.git
+	git clone git@github.com:UBC-MDS/MathDistOps.git
 	```
 
 - Install your local copy with Poetry, this is how you set up your fork for local development:
@@ -21,7 +41,11 @@ You can contribute in many ways:
     poetry install
     ```
 
-- Create a new branch for your changes: 'git checkout -b feature/new-feature'.
+- Create a new branch for your changes: 
+
+    ```
+    git checkout -b feature/new-feature'.
+    ```
 
 - Make your changes, check that your changes pass the tests by running pytest.
 
@@ -59,7 +83,7 @@ Browse the GitHub issues related to features. Any item labeled as "enhancement" 
 
 ### Documentation
 
-Your project could benefit from additional documentation, whether integrated into the official documentation, included in docstrings, or shared through various platforms such as blog posts and articles.
+Our project could benefit from additional documentation, whether integrated into the official documentation, included in docstrings, or shared through various platforms such as blog posts and articles.
 
 ### Feedback
 
@@ -76,16 +100,6 @@ Before you submit a pull request, check that it meets these guidelines:
 
 ### Code of Conduct
 Please note that the MathDistOps project is released with this Contributor Code of Conduct. By contributing to this project, you agree to abide by its terms.
-
-## Contributing (Internal)
-
-
-An internal pipeline for contribution goes as follows: 
-1. After a standup meeting, issues are collated and raised on issue board. 
-2. A new branch is created for each issue for work to be done. 
-3. Pull request is raised once work is completed. An approval from another team member (a reviewer) is required before merging to main. 
-
-Comments for each pull request is actually encouraged to improve contribution by all team members. Communication through github and slack, as well as during weekly meetings also make great improvement to the whole project. 
 
 ref: Inspried by Tiffany's example: https://github.com/ttimbers/convertempPy/blob/master/CONTRIBUTING.md
 
