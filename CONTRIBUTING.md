@@ -79,7 +79,13 @@ Please note that the MathDistOps project is released with this Contributor Code 
 
 ## Contributing (Internal)
 
-We build several branches to store functions and a bunch of files like contributing, contributor, readme. If we have issues, will pull it on the github. Some issues come from conflict, some come from code review, like formats. Comments for each pull requests can improve contribution. Team members have different roles which can make pipeline clearly. coomunication through github and weekly meetings also make great improvment to the whole project. 
+
+An internal pipeline for contribution goes as follows: 
+1. After a standup meeting, issues are collated and raised on issue board. 
+2. A new branch is created for each issue for work to be done. 
+3. Pull request is raised once work is completed. An approval from another team member (a reviewer) is required before merging to main. 
+
+Comments for each pull request is actually encouraged to improve contribution by all team members. Communication through github and slack, as well as during weekly meetings also make great improvement to the whole project. 
 
 ref: Inspried by Tiffany's example: https://github.com/ttimbers/convertempPy/blob/master/CONTRIBUTING.md
 
