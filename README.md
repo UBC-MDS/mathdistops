@@ -2,7 +2,7 @@
 
 This package provides statistical functions for normal and exponential distributions, including pnorm, qnorm, pexp, and qexp. Each function not only performs the respective statistical calculation but also generates the corresponding plot of the distribution, offering both numerical results and visual outputs.
 
-![Python](https://img.shields.io/badge/lanaguge-Python-red.svg)
+![Python](https://img.shields.io/badge/language-Python-red.svg)
 ![codesize](https://img.shields.io/github/languages/code-size/UBC-MDS/MathDistOps)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/UBC-MDS/MathDistOps?include_prereleases)
 ![contributors](https://img.shields.io/github/contributors/UBC-MDS/MathDistOps)
