@@ -9,6 +9,7 @@ This package provides statistical functions for normal and exponential distribut
 [![MIT License](https://img.shields.io/badge/License-MIT-informational?style=flat-square)](LICENSE-MIT)
 
 ## Installation
+- The installation package is being worked on, and will be ready in the near future. 
 
 ```bash
 $ pip install mathdistops
@@ -43,4 +44,4 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## Credits
 
-`mathdistops` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+`mathdistops` was created with a template tool [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
