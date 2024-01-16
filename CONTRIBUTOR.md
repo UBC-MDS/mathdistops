@@ -1,10 +1,13 @@
 # Credits
 
 ## Development Lead
-* Ya Kun <> Ziwei Chen <zchen280@asu.edu> Sivakorn (Oak) Chongfeungprinya <sivakornchong@gmail.com>  Sandy Gross <sandra-starnberg@web.de> 
+- Katherine Chen <zchen280@asu.edu>
+- Kun Ya <kunya@live.cn>
+- Oak Chong  <sivakornchong@gmail.com>
+- Sandra Gross <sandra-starnberg@web.de> 
 
 ## Contributors
-* Ya Kun, Ziwei (Katherine) Chen, Sivakorn (Oak) Chongfeungprinya,  Sandy Gross 
+Katherine Chen, Kun Yam, Oak Chong, Sandra Gross
 
 
 

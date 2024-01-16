@@ -1,12 +1,19 @@
 # mathdistops
 
-This package provides statistical functions for normal and exponential distributions, including pnorm, qnorm, pexp, and qexp. Each function not only performs the respective statistical calculation but also  generate a corresponding plot, offering both numerical results and visual outputs.
+This package provides statistical functions for normal and exponential distributions, including pnorm, qnorm, pexp, and qexp. Each function not only performs the respective statistical calculation but also generates the corresponding plot of the distribution, offering both numerical results and visual outputs.
 
-![Python](https://img.shields.io/badge/lanaguge-Python-red.svg)
+![Python](https://img.shields.io/badge/language-Python-red.svg)
 ![codesize](https://img.shields.io/github/languages/code-size/UBC-MDS/MathDistOps)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/UBC-MDS/MathDistOps?include_prereleases)
 ![contributors](https://img.shields.io/github/contributors/UBC-MDS/MathDistOps)
 [![MIT License](https://img.shields.io/badge/License-MIT-informational?style=flat-square)](LICENSE-MIT)
+
+## Contributors
+Our team listed in alphabetical order:
+- Katherine Chen
+- Kun Ya
+- Oak Chong
+- Sandra Gross
 
 ## Installation
 - The installation package is being worked on, and will be ready in the near future. 
@@ -16,13 +23,13 @@ $ pip install mathdistops
 ```
 
 ## Functions
-- pexp(x, rate, plot_graph=False): Calculate the exponential distribution cumulative probability for a given value and plots the corresponding distribution. This function computes the cumulative probability at a specified quantile `x` for an exponential distribution with a given rate parameter `lambda`. Optionally, it can generate and return a visualization of the distribution.
+- pexp(x, rate, plot_graph=False): Represents the Cumulative Distribution Function of the exponential distribution characterized by a given parameter `rate`. The function calculates the cumulative probability for a given quantile `x` and can plot the corresponding distribution. 
 
-- pnorm(x, mean=0, std_dev=1, plot_graph=True): Cumulative Distribution Function (CDF) of the normal distribution with specified mean and standard deviation. It will return the cumulative probability up to the given value `x`. Optionally, it can generate and return a visualization of the distribution.
+- qexp(p, rate, plot_graph=False): Quantile Function of an exponential distribution, characterized by a given rate parameter `rate`. The function calculates the quantile corresponding to given cumulative probability `p` in an exponential distribution. Optionally, it can also generate and return a visualization of the distribution.
 
-- qexp(p, rate, plot_graph=False): Calculates the quantile corresponding to given cumulative probability in an exponential distribution and plots the corresponding distribution. This function computes the quantile corresponding to a specified cumulative probability `p`. for an exponential distribution characterized by a given rate parameter `lambda`. Optionally, it can also generate and return a visualization of the distribution.
+- pnorm(x, mean=0, std_dev=1, plot_graph=True): Cumulative Distribution Function of the normal distribution with specified mean and standard deviation. It will return the cumulative probability up to the given value `x`. Optionally, it can generate and return a visualization of the distribution.
 
-- qnorm(p, mean=0, std_dev=1, plot_graph=True): Calculates the quantile (Inverse Cumulative Distribution Function) of the normal distribution.This function computes the quantile corresponding to a specified cumulative probability `p`. for an exponential distribution characterized by a given rate parameter `lambda`. Optionally, it can also generate and return a visualization of the distribution.
+- qnorm(p, mean=0, std_dev=1, plot_graph=True): Calculates the quantile (Inverse Cumulative Distribution Function) corresponding to a specified cumulative probability `p` of the normal distribution with specified mean and standard deviation. Optionally, it can also generate and return a visualization of the distribution.
 
 ## Python Ecosystem Integration
 While python has relevant functions for normal and exponential distribution in the scipy.stats package, this package offer an in-built additional functionality of returning the plot to help with visualization and understanding the problem. 
@@ -40,7 +47,7 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`mathdistops` was created by Ziwei Chen, Kun Ya, Sivakorn Oak Chong, Sandra Gross. It is licensed under the terms of the MIT license.
+`mathdistops` was created by Katherine Chen, Kun Ya, Oak Chong, Sandra Gross. It is licensed under the terms of the MIT license.
 
 ## Credits
 
