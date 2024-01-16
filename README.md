@@ -16,7 +16,7 @@ Our team listed in alphabetical order:
 - Sandra Gross
 
 ## Installation
-- The installation package is being worked on, and will be ready in the near future. 
+The installation package is being worked on, and will be ready in the near future. Instead of the command below, clone the repository and run `poetry install` for using the package.  
 
 ```bash
 $ pip install mathdistops
