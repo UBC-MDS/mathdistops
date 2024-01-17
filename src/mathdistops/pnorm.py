@@ -82,6 +82,7 @@ def pnorm(q=None, mean = 0, std_dev =1, graph = True):
     vertline = alt.Chart(pd.DataFrame({'z': [q]})).mark_rule(strokeDash=[3, 3]).encode(
         x='z'
     )
+
     #CDF
     cdf_chart = alt.Chart(df, title=f"Cumulative Distribution Chart for q = {q}, mean = {mean}, sd = {std_dev}").mark_line().encode(
         x=alt.X('x').title("x"),
@@ -92,9 +93,14 @@ def pnorm(q=None, mean = 0, std_dev =1, graph = True):
         width=300,
         height=150
     )
+
+    # Add horiozontal line at respective p
+    horizontalline = alt.Chart(pd.DataFrame({'p': [prob]})).mark_rule(strokeDash=[3, 3]).encode(
+        y='p'
+    )
     
     # Combine all plots
-    result_graph = (shade_area + chart + vertline) |(cdf_chart + vertline)
+    result_graph = (shade_area + chart + vertline) |(cdf_chart + vertline + horizontalline)
 
     if graph == True: 
         return results_df, result_graph
