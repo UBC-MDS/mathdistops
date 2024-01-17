@@ -1,7 +1,4 @@
-from scipy.special import erf
 import math
-import matplotlib.pyplot as plt
-import scipy.stats as stats
 import numpy as np
 import altair as alt
 import pandas as pd
@@ -29,6 +26,14 @@ def pexp(q=None, rate=1, graph=True):
         If `graph` is True (default), returns a tuple consisting of a pandas DataFrame and a 
             layered altair Chart consisting of two graphs, CDF and PDF.
         If `graph` is False, returns a pandas DataFrame.
+
+    Formula
+    -------
+    F(x; λ) = 1 - e^(-λx)
+
+    The CDF describes the probability that a random variable in an exponential distribution
+    is less than or equal to a specified value `x`. It is characterized by the rate (`λ`),
+    determining the decay rate of the function.
 
     Examples
     --------
