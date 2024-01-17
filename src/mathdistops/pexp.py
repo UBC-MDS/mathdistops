@@ -36,4 +36,21 @@ def pexp(x, rate, plot_graph=False):
     prob = 1 - math.exp(-rate * q)
     results_df = pd.DataFrame({'Quantile': [q], 'Cumulative probability': [prob]})
 
-    return results_df
+    x_values = np.linspace(0, q + 3 / rate, 1000)
+    y_values_pdf = rate * np.exp(-rate * x_values)
+    y_values_cdf = 1 - np.exp(-rate * x_values)
+    data = {'x': x_values, 'pdf': y_values_pdf, 'cdf': y_values_cdf, 'q': q}
+    df = pd.DataFrame(data)
+    
+    # PDF chart
+    pdf_chart = alt.Chart(df).mark_line().encode(
+        x='x',
+        y='pdf'
+    ).properties(
+        title=f'Probability Density Function for q = {q}, rate = {rate}'
+    )
+
+    if graph:
+        return pdf_chart
+    else:
+        return results_df
