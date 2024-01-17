@@ -44,6 +44,15 @@ def pexp(q=None, rate=1, graph=True):
     -----
     The function will raise a ValueError if `x` is negative or `rate` is non-positive.
     """
+    if q is None:
+        raise ValueError("Parameter 'q' is required.")
+
+    if rate <= 0:
+        raise ValueError("Rate cannot be zero or negative.")
+
+    if not isinstance(q, (int, float)) or not isinstance(rate, (int, float)):
+        raise TypeError("Input parameters must be numerical.")
+        
     # Calculate cumulative probability
     prob = 1 - math.exp(-rate * q)
     results_df = pd.DataFrame({'Quantile': [q], 'Cumulative probability': [prob]})
