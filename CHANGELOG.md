@@ -12,7 +12,7 @@
 - Created [README](https://github.com/UBC-MDS/mathdistops/commit/0cd1c468e883f2afba0c69c43a9f1ffa57341f0f) and [Contributing.md](https://github.com/UBC-MDS/mathdistops/commit/6832d2c5006c84204edb0c4195e4e7f2cece68ad)
 
 ### Added Milestone 2 💥
-- Added code and tests for the function [pnorm] (https://github.com/UBC-MDS/mathdistops/commit/3b9fb4acd166ed1801989b5b82bfe1a3fceca1a2)
+- Added code and tests for the function [pnorm](https://github.com/UBC-MDS/mathdistops/commit/3b9fb4acd166ed1801989b5b82bfe1a3fceca1a2)
 - Added code and tests for the function [qnorm] 
 - Added code and tests for the function [pexp]
 - Added code and tests for the function [qexp]
