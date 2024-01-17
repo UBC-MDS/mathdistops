@@ -26,4 +26,12 @@ def test_df_results_pexp():
     cumulative_probability = results_df['Cumulative probability'].iloc[0]
     assert 0 <= cumulative_probability <= 1, "Expected cumulative probability to be between 0 and 1"
 
+def test_missing_input_pexp():
+    """
+    Test case for ValueError when parameter `q` is missing in pexp.
+    """
+    with pytest.raises(ValueError) as custom_string:
+        results, graph = pexp()
+    assert str(custom_string.value) == "Parameter 'q' is required.", "Expected a ValueError for missing 'q' parameter"
+
 
