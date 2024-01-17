@@ -61,6 +61,18 @@ def pexp(x, rate, plot_graph=False):
         x='q'
     )
 
+    # CDF
+    cdf_chart = alt.Chart(df, title=f'Cumulative Distribution Function for q = {q}, rate = {rate}').mark_line().encode(
+        x=alt.X('x').title("x"),
+        y=alt.Y('cdf').title('probability'),
+        color=alt.value('orange'),
+        opacity=alt.value(0.5),
+    ).properties(
+        width=300,
+        height=150
+    )
+
+
 
     if graph:
         return pdf_chart
