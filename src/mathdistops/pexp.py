@@ -56,6 +56,11 @@ def pexp(x, rate, plot_graph=False):
         alt.datum.x <= q  
     )
 
+    # Add vertical line at respective quantile 
+    vertline = alt.Chart(pd.DataFrame({'q': [q]})).mark_rule(strokeDash=[3, 3]).encode(
+        x='q'
+    )
+
 
     if graph:
         return pdf_chart
