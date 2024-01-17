@@ -63,6 +63,9 @@ def pexp(q=None, rate=1, graph=True):
     chart = alt.Chart(df).mark_line().encode(
         x='x',
         y='pdf'
+    ).properties(
+        width=300,
+        height=300
     )
 
     #Add a shaded area under the curve ()
@@ -86,7 +89,7 @@ def pexp(q=None, rate=1, graph=True):
         opacity=alt.value(0.5),
     ).properties(
         width=300,
-        height=150
+        height=300
     )
 
     # Combine all plots
