@@ -39,10 +39,6 @@ def pexp(q=None, rate=1, graph=True):
     --------
     >>> pexp(0.5, rate=1, plot_graph=True)
     (0.3934693402873666, [Matplotlib Figure Object])
-
-    Notes
-    -----
-    The function will raise a ValueError if `x` is negative or `rate` is non-positive.
     """
     if q is None:
         raise ValueError("Parameter 'q' is required.")
