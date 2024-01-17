@@ -37,7 +37,7 @@ def pexp(q=None, rate=1, graph=True):
 
     Examples
     --------
-    >>> pexp(0.5, rate=1, plot_graph=True)
+    >>> pexp(0.5, rate=1, graph=True)
     (0.3934693402873666, [Matplotlib Figure Object])
     """
     if q is None:
