@@ -34,4 +34,14 @@ def test_missing_input_pexp():
         results, graph = pexp()
     assert str(custom_string.value) == "Parameter 'q' is required.", "Expected a ValueError for missing 'q' parameter"
 
+def test_nonsensical_input_pexp():
+    """
+    Test case for ValueError and TypeError in case of incorrect user input for pexp, e.g. negative rate or non-numerical value.
+    """
+    with pytest.raises(ValueError) as custom_string:
+        results = pexp(3, rate=-1, graph=False)
+    assert str(custom_string.value) == "Rate cannot be zero or negative.", "Expected ValueError for negative rate"
 
+    with pytest.raises(TypeError) as custom_string:
+        results = pexp('hi', rate=2, graph=False)
+    assert str(custom_string.value), "Input parameters must be numerical.", "Expected TypeError for non-numerical input"
