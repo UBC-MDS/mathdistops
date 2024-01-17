@@ -42,13 +42,20 @@ def pexp(x, rate, plot_graph=False):
     data = {'x': x_values, 'pdf': y_values_pdf, 'cdf': y_values_cdf, 'q': q}
     df = pd.DataFrame(data)
     
-    # PDF chart
-    pdf_chart = alt.Chart(df).mark_line().encode(
+    # PDF
+    chart = alt.Chart(df).mark_line().encode(
         x='x',
         y='pdf'
-    ).properties(
-        title=f'Probability Density Function for q = {q}, rate = {rate}'
     )
+
+    #Add a shaded area under the curve ()
+    shade_area = alt.Chart(df, title=f'Probability Density Function for q = {q}, rate = {rate}').mark_area(opacity=0.3, color='lightblue').encode(
+        x=alt.X('x', title='X'),
+        y=alt.Y('pdf', title='f(X)')
+    ).transform_filter(
+        alt.datum.x <= q  
+    )
+
 
     if graph:
         return pdf_chart
