@@ -1,4 +1,12 @@
-def pexp(x, rate, plot_graph=False):
+from scipy.special import erf
+import math
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+import numpy as np
+import altair as alt
+import pandas as pd
+
+def pexp(q=None, rate=1, graph=True):
     """
     Calculates the cumulative probability of an exponential distribution for a given value and plots the corresponding distribution.
 
@@ -72,9 +80,10 @@ def pexp(x, rate, plot_graph=False):
         height=150
     )
 
+    # Combine all plots
+    result_graph = (shade_area + chart + vertline) |(cdf_chart + vertline)
 
-
-    if graph:
-        return pdf_chart
+    if graph == True: 
+        return results_df, result_graph
     else:
         return results_df
