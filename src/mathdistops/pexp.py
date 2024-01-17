@@ -8,28 +8,27 @@ import pandas as pd
 
 def pexp(q=None, rate=1, graph=True):
     """
-    Calculates the cumulative probability of an exponential distribution for a given value and plots the corresponding distribution.
+    Calculates the cumulative probability of the exponential distribution at this quantile and plots corresponding PDF and CDF.
 
     This function computes the cumulative probability at a specified quantile `x` for an exponential
     distribution with a given rate parameter `lambda`. Optionally, it can generate and return a visualization
-    of the distribution.
+    corresponding PDF and CDF.
 
     Parameters
     ----------
-    x : float
-        The quantile at which to calculate the cumulative probability. Must be a non-negative number.
+    q : float
+        The quantile at which to evaluate the CDF. Default is None.
     rate : float
-        The rate parameter (`lambda`) of the exponential distribution. Must be a positive number.
-    plot_graph : bool, optional
-        If True, generates and returns a plot of the exponential distribution with the cumulative probability
-        highlighted for the given quantile. Default is False.
+        The rate parameter (lambda) of the exponential distribution. Default is 1.
+    graph : bool
+        Whether to plot the PDF and CDF graph. Default is True.
 
     Returns
     -------
-    float
-        Cumulative probability for the given quantile.
-    matplotlib.figure.Figure or None
-        A plot of the exponential distribution if `output_image` is True. Otherwise, None.
+    result : pandas.DataFrame or tuple
+        If `graph` is True (default), returns a tuple consisting of a pandas DataFrame and a 
+            layered altair Chart consisting of two graphs, CDF and PDF.
+        If `graph` is False, returns a pandas DataFrame.
 
     Examples
     --------
