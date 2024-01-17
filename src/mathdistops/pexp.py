@@ -32,5 +32,8 @@ def pexp(x, rate, plot_graph=False):
     -----
     The function will raise a ValueError if `x` is negative or `rate` is non-positive.
     """
-    pass  # Function implementation goes here
+    # Calculate cumulative probability
+    prob = 1 - math.exp(-rate * q)
+    results_df = pd.DataFrame({'Quantile': [q], 'Cumulative probability': [prob]})
 
+    return results_df
