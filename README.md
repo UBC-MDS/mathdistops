@@ -37,6 +37,8 @@ This package uses [Poetry](https://python-poetry.org/) for dependency management
 
 ## Usage
 
+### Using this package
+
 To use this package, you can import and call its functions in your Python scripts. Here's an example:
 
 ```python
@@ -46,10 +48,25 @@ result = pnorm(1, mean=0, std_dev=1)
 print(result)
 ```
 
+### Running unit tests
+
+To run unit tests for this package, execute the following in the project root directory: 
+
+```bash
+    $ poetry run pytest
+```
+
+To get a the code covergage reporting, run this command:
+
+```bash
+    $ poetry run pytest --cov=quanteda
+```
+
+
 ## Functions
 - pexp(q=None, rate=1, graph=True): Represents the Cumulative Distribution Function of the exponential distribution characterized by a given parameter `rate`. The function calculates the cumulative probability for a given quantile `q` and can plot the corresponding distribution. 
 
-- qexp(p, rate, graph=False): Quantile Function of an exponential distribution, characterized by a given rate parameter `rate`. The function calculates the quantile corresponding to given cumulative probability `p` in an exponential distribution. Optionally, it can also generate and return a visualization of the distribution.
+- qexp(p, rate=1, graph=True): Quantile Function of an exponential distribution, characterized by a given rate parameter `rate`. The function calculates the quantile corresponding to given cumulative probability `p` in an exponential distribution. Optionally, it can also generate and return a visualization of the distribution.
 
 - pnorm(x, mean=0, std_dev=1, graph=True): Cumulative Distribution Function of the normal distribution with specified mean and standard deviation. It will return the cumulative probability up to the given value `x`. Optionally, it can generate and return a visualization of the distribution.
 
@@ -61,6 +78,10 @@ While python has relevant functions for normal and exponential distribution in t
 ### Related Packages:
 - [scipy.stats.norm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html) is an official scipy package to represent a normal continuous random variable.
 - [scipy.stats.expon](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.expon.html) is an official scipy package to represent an exponential continuous random variable.
+
+## Dependencies
+
+This package necessitates a Python version of 3 or higher. Additional required packages can be found in the [environment file](https://github.com/UBC-MDS/mathdistops/blob/main/environment.yaml) of this repository.
 
 ## Contributing
 
