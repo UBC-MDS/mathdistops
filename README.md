@@ -47,7 +47,7 @@ print(result)
 ```
 
 ## Functions
-- pexp(x, rate, graph=False): Represents the Cumulative Distribution Function of the exponential distribution characterized by a given parameter `rate`. The function calculates the cumulative probability for a given quantile `x` and can plot the corresponding distribution. 
+- pexp(q=None, rate=1, graph=True): Represents the Cumulative Distribution Function of the exponential distribution characterized by a given parameter `rate`. The function calculates the cumulative probability for a given quantile `q` and can plot the corresponding distribution. 
 
 - qexp(p, rate, graph=False): Quantile Function of an exponential distribution, characterized by a given rate parameter `rate`. The function calculates the quantile corresponding to given cumulative probability `p` in an exponential distribution. Optionally, it can also generate and return a visualization of the distribution.
 
