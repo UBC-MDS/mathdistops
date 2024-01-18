@@ -91,7 +91,7 @@ def pnorm(q=None, mean = 0, std_dev =1, graph = True):
         opacity=alt.value(0.5),
     ).properties(
         width=300,
-        height=150
+        height=300
     )
 
     # Add horiozontal line at respective p

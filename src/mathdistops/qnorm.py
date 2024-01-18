@@ -108,7 +108,7 @@ def qnorm(p, mean=0, std_dev=1, graph=True):
         opacity=alt.value(0.5),
     ).properties(
         width=300,
-        height=150
+        height=300
     )
 
     horizontalline = alt.Chart(pd.DataFrame({'p': [prob]})).mark_rule(strokeDash=[3, 3]).encode(
