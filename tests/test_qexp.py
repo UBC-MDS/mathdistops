@@ -42,3 +42,11 @@ def test_invalid_rate_input():
     with pytest.raises(ValueError) as excinfo:
         qexp(0.5, -1)
     assert str(excinfo.value) == "Rate parameter must be a positive number."
+
+def test_graph_properties():
+    """
+    Tests if the plot has the correct properties.
+    """
+    _, chart = qexp(0.5, 1, graph=True)
+    assert isinstance(chart, alt.LayerChart)
+    assert len(chart.layer) == 2  
