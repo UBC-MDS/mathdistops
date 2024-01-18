@@ -52,8 +52,8 @@ def qnorm(p, mean=0, std_dev=1, graph=True):
 
     """
     
-    # if p is None:
-    #     raise ValueError("Parameter 'p' is required.")
+    if p is None:
+        raise ValueError("Parameter 'p' is required.")
 
     if p<0 or p>1:
         raise ValueError("Parameter 'p' stands for probability, which should have a value between 0 and 1 only.")
