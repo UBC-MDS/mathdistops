@@ -18,15 +18,15 @@ def qnorm(p, mean=0, std_dev=1, graph=True):
         The mean (average) of the normal distribution. Default is 0.
     std_dev: float, optional
         The standard deviation of the normal distribution. Default is 1.
-    plot_graph: bool, optional
+    graph: bool, optional
         Whether to plot the PDF and CDF graphs. Default is True.
 
     Returns
     -------
-    float
-        The value at which the cumulative probability is less than or equal to `p`.
-    matplotlib.figure.Figure or None
-        A plot of the normal distribution if 'plot_graph' is True. Otherwise, None.
+    result : pandas.DataFrame or tuple
+        If `graph` is True (default), returns a tuple consisting a pandas DataFrame and a 
+            layered altair Chart consisting of two graphs, CDF and PDF
+        If `graph` is False, returns a pandas DataFrame..
 
     Formula
     -------
@@ -44,11 +44,6 @@ def qnorm(p, mean=0, std_dev=1, graph=True):
     -------
     >>> qnorm(0.8413447460685429, mean=0, std_dev=1)
     1.0
-
-    Notes
-    -----
-    The quantile function involves the inverse of the error function (erfinv), and its
-    application may lead to undefined values or errors for extreme probabilities.
 
     """
     
