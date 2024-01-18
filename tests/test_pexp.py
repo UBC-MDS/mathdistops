@@ -53,18 +53,13 @@ def test_figure_components_pexp():
     Tests whether the pexp function creates figures with the correct components.
     """
     _, graph = pexp(1.5, rate=1)
-    assert isinstance(graph, (alt.Chart, alt.LayerChart, alt.HConcatChart)), "Expected graph to be an Altair Chart, LayerChart, or HConcatChart object"
     graph_dict = graph.to_dict()
 
     pdf_found = False
     cdf_found = False
     rule_found = False
     area_found = False
-
-    if isinstance(graph, alt.HConcatChart):
-        charts = graph_dict['hconcat']
-    else:
-        charts = [graph_dict]
+    charts = graph_dict['hconcat']
 
     for chart_dict in charts:
         layers = chart_dict.get('layer', [])
@@ -85,8 +80,32 @@ def test_figure_components_pexp():
             if mark_type == 'area' and y_field == 'pdf':
                 area_found = True
 
-    assert pdf_found, "Expected PDF line in charts"
-    assert cdf_found, "Expected CDF line in charts"
-    assert rule_found, "Expected vertical line at quantile in charts"
-    assert area_found, "Expected shaded area under the PDF curve in charts"
+    assert pdf_found == True, "Expected PDF line in charts"
+    assert cdf_found == True, "Expected CDF line in charts"
+    assert rule_found == True, "Expected vertical line at quantile in charts"
+    assert area_found == True, "Expected shaded area under the PDF curve in charts"
+
+def test_figure_properties_pexp():
+    """
+    Tests specific properties of the figures created by the pexp function.
+    """
+    _, graph = pexp(1.5, rate=1)
+    charts = graph.to_dict()['hconcat']
+
+    pdf_title_found = False
+    cdf_title_found = False
+    pdf_title = "Probability Density Function for q = 1.5, rate = 1"
+    cdf_title = "Cumulative Distribution Function for q = 1.5, rate = 1"
+
+    for chart_dict in charts:
+        for layer in chart_dict.get('layer', []):
+            title_component = layer.get('title', '')
+            title_text = title_component if isinstance(title_component, str) else title_component.get('text', '')
+            if title_text == pdf_title:
+                pdf_title_found = True
+            elif title_text == cdf_title:
+                cdf_title_found = True
+
+    assert pdf_title_found, f"PDF title does not match expected. Expected: '{pdf_title}'"
+    assert cdf_title_found, f"CDF title does not match expected. Expected: '{cdf_title}'"
 
