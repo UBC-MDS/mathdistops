@@ -35,7 +35,7 @@ This package uses [Poetry](https://python-poetry.org/) for dependency management
 
     This command creates a virtual environment and installs all the necessary dependencies.
 
-### Usage
+## Usage
 
 To use this package, you can import and call its functions in your Python scripts. Here's an example:
 
@@ -44,6 +44,7 @@ from mathdistops import pnorm
 
 result = pnorm(1, mean=0, std_dev=1)
 print(result)
+```
 
 ## Functions
 - pexp(x, rate, graph=False): Represents the Cumulative Distribution Function of the exponential distribution characterized by a given parameter `rate`. The function calculates the cumulative probability for a given quantile `x` and can plot the corresponding distribution. 
