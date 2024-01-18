@@ -30,3 +30,11 @@ def test_invalid_probability_input():
     with pytest.raises(ValueError) as excinfo:
         qexp(1.1, 1)
     assert str(excinfo.value) == "Cumulative probability must be between 0 and 1."
+
+def test_invalid_rate_input():
+    """
+    Tests function's response to invalid rate values.
+    """
+    with pytest.raises(ValueError) as excinfo:
+        qexp(0.5, 0)
+    assert str(excinfo.value) == "Rate parameter must be a positive number."
