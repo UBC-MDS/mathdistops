@@ -16,4 +16,4 @@
 - Added code and tests for the function [qnorm] 
 - Added code and tests for the function [pexp](https://github.com/UBC-MDS/mathdistops/commit/0294fc3b6dd6de193e65c478039c7ebf3fe3c936)
 - Added code and tests for the function [qexp]
-- Updated README with Usage section [readme](https://github.com/UBC-MDS/mathdistops/commit/7120b8df774f610c99a44103c45f8d95a215445a)
+- Updated [README](https://github.com/UBC-MDS/mathdistops/commit/7120b8df774f610c99a44103c45f8d95a215445a) with Usage section
