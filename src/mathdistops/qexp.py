@@ -63,4 +63,6 @@ def qexp(p, rate, graph=False):
             width=600,
             height=400
         )
+        
+    return quantile, chart
     
