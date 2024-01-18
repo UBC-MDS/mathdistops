@@ -38,4 +38,7 @@ def test_invalid_rate_input():
     with pytest.raises(ValueError) as excinfo:
         qexp(0.5, 0)
     assert str(excinfo.value) == "Rate parameter must be a positive number."
-    
+
+    with pytest.raises(ValueError) as excinfo:
+        qexp(0.5, -1)
+    assert str(excinfo.value) == "Rate parameter must be a positive number."
