@@ -21,15 +21,20 @@ def test_output_datatypes():
 
 def test_invalid_probability_input():
     """
-    Tests function's response to invalid probability values.
+    Tests function's response to invalid probability values, including the edge case of p=1.
     """
     with pytest.raises(ValueError) as excinfo:
         qexp(-0.1, 1)
-    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1."
+    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1, exclusive of 1"
 
     with pytest.raises(ValueError) as excinfo:
         qexp(1.1, 1)
-    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1."
+    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1, exclusive of 1"
+
+    with pytest.raises(ValueError) as excinfo:
+        qexp(1, 1)
+    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1, exclusive of 1"
+
 
 def test_invalid_rate_input():
     """
