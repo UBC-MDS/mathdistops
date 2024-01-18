@@ -27,4 +27,6 @@ def test_invalid_probability_input():
         qexp(-0.1, 1)
     assert str(excinfo.value) == "Cumulative probability must be between 0 and 1."
 
-    
+    with pytest.raises(ValueError) as excinfo:
+        qexp(1.1, 1)
+    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1."
