@@ -18,3 +18,13 @@ def test_output_datatypes():
     quantile, graph = qexp(0.5, 1, graph=True)
     assert isinstance(quantile, float)
     assert isinstance(graph, alt.LayerChart) or graph is None
+
+def test_invalid_probability_input():
+    """
+    Tests function's response to invalid probability values.
+    """
+    with pytest.raises(ValueError) as excinfo:
+        qexp(-0.1, 1)
+    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1."
+
+    
