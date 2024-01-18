@@ -1,7 +1,7 @@
 import numpy as np
 import altair as alt
 import pandas as pd
-def qexp(p, rate, plot_graph=False):
+def qexp(p, rate, graph=False):
     """
     Calculates the quantile corresponding to given cumulative probability in an exponential distribution and plots the corresponding distribution.
 
@@ -42,3 +42,15 @@ def qexp(p, rate, plot_graph=False):
         raise ValueError("Rate parameter must be a positive number.")
 
     quantile = -np.log(1 - p) / rate
+
+    chart = None
+    if graph:
+        x_values = np.linspace(0, quantile * 2, 500)
+        pdf_values = rate * np.exp(-rate * x_values)
+        data = pd.DataFrame({'x': x_values, 'PDF': pdf_values})
+
+        line = alt.Chart(data).mark_line().encode(
+            x='x',
+            y='PDF'
+        )
+    
