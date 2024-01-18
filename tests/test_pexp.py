@@ -48,3 +48,45 @@ def test_nonsensical_input_pexp():
         results = pexp('hi', rate=2, graph=False)
     assert str(custom_string.value), "Input parameters must be numerical."
 
+def test_figure_components_pexp():
+    """
+    Tests whether the pexp function creates figures with the correct components.
+    """
+    _, graph = pexp(1.5, rate=1)
+    assert isinstance(graph, (alt.Chart, alt.LayerChart, alt.HConcatChart)), "Expected graph to be an Altair Chart, LayerChart, or HConcatChart object"
+    graph_dict = graph.to_dict()
+
+    pdf_found = False
+    cdf_found = False
+    rule_found = False
+    area_found = False
+
+    if isinstance(graph, alt.HConcatChart):
+        charts = graph_dict['hconcat']
+    else:
+        charts = [graph_dict]
+
+    for chart_dict in charts:
+        layers = chart_dict.get('layer', [])
+        for layer in layers:
+            mark_type = layer.get('mark', {}).get('type', '')
+            encoding = layer.get('encoding', {})
+            y_field = encoding.get('y', {}).get('field', '')
+
+            if mark_type == 'line' and y_field == 'pdf':
+                pdf_found = True
+
+            if mark_type == 'line' and y_field == 'cdf':
+                cdf_found = True
+
+            if mark_type == 'rule':
+                rule_found = True
+
+            if mark_type == 'area' and y_field == 'pdf':
+                area_found = True
+
+    assert pdf_found, "Expected PDF line in charts"
+    assert cdf_found, "Expected CDF line in charts"
+    assert rule_found, "Expected vertical line at quantile in charts"
+    assert area_found, "Expected shaded area under the PDF curve in charts"
+
