@@ -1,3 +1,6 @@
+import numpy as np
+import altair as alt
+import pandas as pd
 def qexp(p, rate, plot_graph=False):
     """
     Calculates the quantile corresponding to given cumulative probability in an exponential distribution and plots the corresponding distribution.
@@ -33,4 +36,9 @@ def qexp(p, rate, plot_graph=False):
     -----
     The function will raise a ValueError if `p` is not in the range [0, 1] or if `rate` is non-positive.
     """
-    pass  # Function implementation goes here
+    if not 0 <= p <= 1:
+        raise ValueError("Cumulative probability must be between 0 and 1.")
+    if rate <= 0:
+        raise ValueError("Rate parameter must be a positive number.")
+
+    quantile = -np.log(1 - p) / rate
