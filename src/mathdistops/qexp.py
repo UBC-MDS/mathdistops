@@ -57,4 +57,10 @@ def qexp(p, rate, graph=False):
             x='x',
             y='PDF'
         )
+
+        chart = alt.layer(line, point).properties(
+            title='Exponential Distribution (PDF)',
+            width=600,
+            height=400
+        )
     
