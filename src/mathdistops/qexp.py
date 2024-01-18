@@ -53,4 +53,8 @@ def qexp(p, rate, graph=False):
             x='x',
             y='PDF'
         )
+        point = alt.Chart(pd.DataFrame({'x': [quantile], 'PDF': [rate * np.exp(-rate * quantile)]})).mark_point(color='red').encode(
+            x='x',
+            y='PDF'
+        )
     
