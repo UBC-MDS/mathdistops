@@ -57,6 +57,7 @@ df, fig = pnorm(1, mean=0, std_dev=1)
 print(df)
 fig
 ```
+Below is a sample usage on Jupyter Notebook. 
 ![Sample Usage](https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample.jpg)
 
 ### Running unit tests
