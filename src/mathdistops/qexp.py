@@ -57,7 +57,7 @@ def qexp(p=0.5, rate=1, graph=True):
             x='x',
             y='PDF'
         ).properties(
-            title=f'Exponential Distribution PDF (q = {quantile}, rate = {rate})',
+            title=f'Exponential Distribution PDF (p = {p}, rate = {rate})',
             width=300,
             height=300
         )
@@ -78,7 +78,7 @@ def qexp(p=0.5, rate=1, graph=True):
         color=alt.value('orange'),
         opacity=alt.value(0.5),
         ).properties(
-        title=f'Cumulative Distribution Function (q = {quantile}, rate = {rate})',
+        title=f'Cumulative Distribution Function (p = {p}, rate = {rate})',
         width=300,
         height=300
         )

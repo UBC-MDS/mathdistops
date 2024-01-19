@@ -29,7 +29,7 @@ This package uses [Poetry](https://python-poetry.org/) for dependency management
 3. **Install the virtual environment**:
 
    ```bash
-    conda env create -f environment.yml
+    conda env create -f environment.yaml
     ```
 4. **Activate the installed environment**:
 
@@ -50,10 +50,12 @@ This package uses [Poetry](https://python-poetry.org/) for dependency management
 To use this package, you can import and call its functions in your Python scripts. Here's an example:
 
 ```python
+# Run this on jupyter notebook to show the altair object
 from mathdistops import pnorm
 
-result = pnorm(1, mean=0, std_dev=1)
-print(result)
+df, fig = pnorm(1, mean=0, std_dev=1)
+print(df)
+fig
 ```
 
 ### Running unit tests
@@ -64,7 +66,7 @@ To run unit tests for this package, execute the following in the project root di
     $ poetry run pytest
 ```
 
-To get a the code covergage reporting, run this command:
+To get a the code coverage reporting, run this command:
 
 ```bash
     $ poetry run pytest --cov=mathdistops
