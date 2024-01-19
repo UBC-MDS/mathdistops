@@ -25,8 +25,12 @@ def test_output_datatypes():
 
 def test_invalid_probability_input():
     """
-    Tests function's response to invalid probability values, including the edge case of p=1.
+    Tests function's response to invalid probability values, including the edge case of p=1 and p=None.
     """
+    with pytest.raises(ValueError) as custom_string:
+        results = qexp(None)
+    assert str(custom_string.value) == "Parameter 'p' is required."
+    
     with pytest.raises(ValueError) as excinfo:
         qexp(-0.1, 1)
     assert str(excinfo.value) == "Cumulative probability must be between 0 and 1, exclusive of 1"
@@ -39,7 +43,14 @@ def test_invalid_probability_input():
         qexp(1, 1)
     assert str(excinfo.value) == "Cumulative probability must be between 0 and 1, exclusive of 1"
 
-
+    
+def test_missing_input():
+    """
+    Test case for TypeError when parameter `p` is missing.
+    """
+    with pytest.raises(TypeError) as custom_string:
+        results, graph = qexp()
+    assert str(custom_string.value) ==  "qexp() missing 1 required positional argument: 'p'"
 
 def test_invalid_rate_input():
     """
