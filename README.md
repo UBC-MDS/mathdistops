@@ -33,9 +33,9 @@ This package uses [Poetry](https://python-poetry.org/) for dependency management
     ```
 4. **Activate the installed environment**:
 
-  ```bash
+   ```bash
     conda activate mathdistops
-  ```
+   ```
 
 5. **Install the Package with Poetry**: Use Poetry to install the package and its dependencies.
 
