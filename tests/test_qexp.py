@@ -2,34 +2,44 @@ from mathdistops.qexp import qexp
 import pytest
 import altair as alt
 import numpy as np
+import pandas as pd
 
 def test_quantile_calculation():
     """
     Tests whether function calculates quantile correctly.
     """
     # Known values for specific cases
-    assert qexp(0.5, 1, False)[0] == -np.log(0.5)
-    assert qexp(0.75, 2, False)[0] == -np.log(0.25) / 2
+    assert qexp(0.5, 1, False)['Quantile'].iloc[0]== -np.log(0.5)
+    assert qexp(0.75, 2, False)['Quantile'].iloc[0]== -np.log(0.25) / 2
+
 
 def test_output_datatypes():
     """
     Tests whether function returns correct output data types.
     """
-    quantile, graph = qexp(0.5, 1, graph=True)
-    assert isinstance(quantile, float)
-    assert isinstance(graph, alt.LayerChart) or graph is None
+    df, chart = qexp(0.5, 1, graph=True)
+    assert isinstance(df, pd.DataFrame)
+    assert hasattr(chart, 'hconcat')
+    assert len(chart.hconcat) == 2
+
 
 def test_invalid_probability_input():
     """
-    Tests function's response to invalid probability values.
+    Tests function's response to invalid probability values, including the edge case of p=1.
     """
     with pytest.raises(ValueError) as excinfo:
         qexp(-0.1, 1)
-    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1."
+    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1, exclusive of 1"
 
     with pytest.raises(ValueError) as excinfo:
         qexp(1.1, 1)
-    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1."
+    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1, exclusive of 1"
+
+    with pytest.raises(ValueError) as excinfo:
+        qexp(1, 1)
+    assert str(excinfo.value) == "Cumulative probability must be between 0 and 1, exclusive of 1"
+
+
 
 def test_invalid_rate_input():
     """
@@ -43,11 +53,11 @@ def test_invalid_rate_input():
         qexp(0.5, -1)
     assert str(excinfo.value) == "Rate parameter must be a positive number."
 
-
 def test_graph_properties():
     """
     Tests if the plot has the correct properties.
     """
     _, chart = qexp(0.5, 1, graph=True)
-    assert isinstance(chart, alt.LayerChart)
-    assert len(chart.layer) == 2  
+    assert hasattr(chart, 'hconcat')
+    assert len(chart.hconcat) == 2
+

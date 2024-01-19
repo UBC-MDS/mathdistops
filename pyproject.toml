@@ -20,6 +20,7 @@ altair = ">=5.2.0"
 pytest = ">=7.4.4"
 pytest-cov = ">=4.1.0"
 
+
 [tool.semantic_release]
 version_variable = "pyproject.toml:version" # version location
 branch = "main"                             # branch to make releases of
