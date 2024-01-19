@@ -59,7 +59,8 @@ To run unit tests for this package, execute the following in the project root di
 To get a the code covergage reporting, run this command:
 
 ```bash
-    $ poetry run pytest --cov=quanteda
+    $ poetry run pytest --cov=mathdistops
+    $ poetry run pytest --cov-branch --cov=mathdistops
 ```
 
 
