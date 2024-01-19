@@ -15,17 +15,17 @@ def qexp(p=0.5, rate=1, graph=True):
         The cumulative probability for which to find the quantile.
         Must be between 0 and 1, exclusive of 1. Default is 0.5.
     rate : float
-        The rate parameter (`lambda`) of the exponential distribution. Must be a positive number.
+        The rate parameter (`lambda`) of the exponential distribution. Must be a positive number. Default is 1
     graph : bool, optional
         If True, generates and returns a plot of the exponential distribution with
         the quantile highlighted for the given cumulative probability. Default is True.
 
     Returns
     -------
-    float
-        Quantile corresponding to the given cumulative probability.
-    layered altair Chart or None
-        A plot of the exponential distribution if output_image is True. Otherwise, None.
+    result : pandas.DataFrame or tuple
+        If `graph` is True (default), returns a tuple consisting of a pandas DataFrame giving you the 
+        cumulative probability and the quantile as well as a layered altair Chart consisting of two graphs, CDF and PDF.
+        If `graph` is False, returns a pandas DataFrame.
 
     Examples
     --------
@@ -40,14 +40,15 @@ def qexp(p=0.5, rate=1, graph=True):
         raise ValueError("Cumulative probability must be between 0 and 1, exclusive of 1")
     if rate <= 0:
         raise ValueError("Rate parameter must be a positive number.")
-
     quantile = -np.log(1 - p) / rate
+    results_df = pd.DataFrame({'Probability': [p], 'Quantile': [quantile]})
 
     
     if graph:
         x_values = np.linspace(0, quantile + 3 / rate, 1000)
         pdf_values = rate * np.exp(-rate * x_values)
-        data = pd.DataFrame({'x': x_values, 'PDF': pdf_values})
+        cdf_values = 1 - np.exp(-rate * x_values)
+        data = pd.DataFrame({'x': x_values, 'PDF': pdf_values, 'CDF': cdf_values, 'q': quantile})
 
         # PDF plot
         pdf_chart = alt.Chart(data).mark_line().encode(
@@ -69,14 +70,26 @@ def qexp(p=0.5, rate=1, graph=True):
             alt.datum.x <= quantile
         )
 
-        chart = pdf_chart + vertline + shade_area
+        cdf_chart = alt.Chart(data).mark_line().encode(
+        x=alt.X('x').title("x"),
+        y=alt.Y('CDF').title('probability'),
+        color=alt.value('orange'),
+        opacity=alt.value(0.5),
+        ).properties(
+        title=f'Cumulative Distribution Function (q = {quantile}, rate = {rate})',
+        width=300,
+        height=300
+        )
+      
+        vertline = alt.Chart(pd.DataFrame({'q': [quantile]})).mark_rule(strokeDash=[3, 3]).encode(
+        x='q'
+        )
 
-        return quantile, chart
+        horizontalline = alt.Chart(pd.DataFrame({'p': [p]})).mark_rule(strokeDash=[3, 3]).encode(
+        y='p'
+        )
+        chart = (pdf_chart + vertline + shade_area) | (cdf_chart + vertline +horizontalline)
+
+        return results_df, chart
     
-    return quantile
-
-
-        
-
-
-
+    return results_df
