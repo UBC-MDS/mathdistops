@@ -18,13 +18,13 @@ def qexp(p=0.5, rate=1, graph=True):
         The rate parameter (`lambda`) of the exponential distribution. Must be a positive number.
     graph : bool, optional
         If True, generates and returns a plot of the exponential distribution with
-        the quantile highlighted for the given cumulative probability. Default is False.
+        the quantile highlighted for the given cumulative probability. Default is True.
 
     Returns
     -------
     float
         Quantile corresponding to the given cumulative probability.
-    matplotlib.figure.Figure or None
+    layered altair Chart or None
         A plot of the exponential distribution if output_image is True. Otherwise, None.
 
     Examples
@@ -43,26 +43,40 @@ def qexp(p=0.5, rate=1, graph=True):
 
     quantile = -np.log(1 - p) / rate
 
-    chart = None
+    
     if graph:
-        x_values = np.linspace(0, quantile * 2, 500)
+        x_values = np.linspace(0, quantile + 3 / rate, 1000)
         pdf_values = rate * np.exp(-rate * x_values)
         data = pd.DataFrame({'x': x_values, 'PDF': pdf_values})
 
-        line = alt.Chart(data).mark_line().encode(
+        # PDF plot
+        pdf_chart = alt.Chart(data).mark_line().encode(
             x='x',
             y='PDF'
+        ).properties(
+            title=f'Exponential Distribution PDF (q = {quantile}, rate = {rate})',
+            width=300,
+            height=300
         )
-        point = alt.Chart(pd.DataFrame({'x': [quantile], 'PDF': [rate * np.exp(-rate * quantile)]})).mark_point(color='red').encode(
+        vertline = alt.Chart(pd.DataFrame({'x': [quantile]})).mark_rule(strokeDash=[3, 3]).encode(
             x='x',
-            y='PDF'
+            color=alt.value('red')
+        )
+        shade_area = alt.Chart(data).mark_area(opacity=0.3, color='lightblue').encode(
+            x=alt.X('x', title='X'),
+            y=alt.Y('PDF', title='f(X)')
+        ).transform_filter(
+            alt.datum.x <= quantile
         )
 
-        chart = alt.layer(line, point).properties(
-            title='Exponential Distribution (PDF)',
-            width=600,
-            height=400
-        )
+        chart = pdf_chart + vertline + shade_area
 
-    return quantile, chart
+        return quantile, chart
+    
+    return quantile
+
+
+        
+
+
 

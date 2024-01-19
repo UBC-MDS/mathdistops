@@ -1,36 +1,42 @@
-def pexp(x, rate, plot_graph=False):
+import numpy as np
+import altair as alt
+import pandas as pd
+def pexp(p=0.5, rate=1, graph=True):
     """
-    Calculates the cumulative probability of an exponential distribution for a given value and plots the corresponding distribution.
+    Calculates the quantile corresponding to given cumulative probability in an exponential distribution and plots the       corresponding distribution.
 
-    This function computes the cumulative probability at a specified quantile `x` for an exponential
-    distribution with a given rate parameter `lambda`. Optionally, it can generate and return a visualization
-    of the distribution.
+    This function computes the quantile corresponding to a specified cumulative probability `p`
+    for an exponential distribution characterized by a given rate parameter `lambda`. Optionally,
+    it can also generate and return a visualization of the distribution.
 
     Parameters
     ----------
-    x : float
-        The quantile at which to calculate the cumulative probability. Must be a non-negative number.
+    p : float, optional
+        The cumulative probability for which to find the quantile.
+        Must be between 0 and 1, exclusive of 1. Default is 0.5.
     rate : float
         The rate parameter (`lambda`) of the exponential distribution. Must be a positive number.
-    plot_graph : bool, optional
-        If True, generates and returns a plot of the exponential distribution with the cumulative probability
-        highlighted for the given quantile. Default is False.
+    graph : bool, optional
+        If True, generates and returns a plot of the exponential distribution with
+        the quantile highlighted for the given cumulative probability. Default is False.
 
     Returns
     -------
     float
-        Cumulative probability for the given quantile.
+        Quantile corresponding to the given cumulative probability.
     matplotlib.figure.Figure or None
-        A plot of the exponential distribution if `output_image` is True. Otherwise, None.
+        A plot of the exponential distribution if output_image is True. Otherwise, None.
 
     Examples
     --------
-    >>> pexp(0.5, rate=1, plot_graph=True)
-    (0.3934693402873666, [Matplotlib Figure Object])
+    >>> qexp(0.5, rate=1, graph=True)
+    (0.6931471805599453, [Matplotlib Figure Object])
 
     Notes
     -----
-    The function will raise a ValueError if `x` is negative or `rate` is non-positive.
+    The function will raise a ValueError if `p` is not in the range [0, 1] or if `rate` is non-positive.
     """
-    pass  # Function implementation goes here
+    pass
+
+
 

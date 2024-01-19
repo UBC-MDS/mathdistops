@@ -8,16 +8,17 @@ def test_quantile_calculation():
     Tests whether function calculates quantile correctly.
     """
     # Known values for specific cases
-    assert qexp(0.5, 1, False)[0] == -np.log(0.5)
-    assert qexp(0.75, 2, False)[0] == -np.log(0.25) / 2
+    assert qexp(0.5, 1, False)== -np.log(0.5)
+    assert qexp(0.75, 2, False)== -np.log(0.25) / 2
 
 def test_output_datatypes():
     """
     Tests whether function returns correct output data types.
     """
-    quantile, graph = qexp(0.5, 1, graph=True)
+    quantile, chart = qexp(0.5, 1, graph=True)
     assert isinstance(quantile, float)
-    assert isinstance(graph, alt.LayerChart) or graph is None
+    assert isinstance(chart, alt.LayerChart) or chart is None
+
 
 def test_invalid_probability_input():
     """
@@ -54,4 +55,4 @@ def test_graph_properties():
     """
     _, chart = qexp(0.5, 1, graph=True)
     assert isinstance(chart, alt.LayerChart)
-    assert len(chart.layer) == 2  
+    assert len(chart.layer) == 3  
