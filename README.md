@@ -18,7 +18,7 @@ Our team listed in alphabetical order:
 ## Installation
 This package uses [Poetry](https://python-poetry.org/) for dependency management and packaging. It is not yet available for installation via `pip`. To install and use this package, please follow these steps:
 
-1. **Install Poetry**: If you don't have Poetry installed, install it by following the official [installation guide](https://python-poetry.org/docs/#installation).
+1. **Install Poetry and Conda**: If you don't have Poetry or Conda installed, install them by following the official installation guide for [Poetry](https://python-poetry.org/docs/#installation) and [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html).
 
 2. **Clone the Repository**: Clone this repository to your local machine.
 
