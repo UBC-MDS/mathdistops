@@ -94,8 +94,12 @@ def pexp(q=None, rate=1, graph=True):
         height=300
     )
 
+    horizontalline = alt.Chart(pd.DataFrame({'p': [prob]})).mark_rule(strokeDash=[3, 3]).encode(
+        y='p'
+    )
+
     # Combine all plots
-    result_graph = (shade_area + chart + vertline) |(cdf_chart + vertline)
+    result_graph = (shade_area + chart + vertline) |(cdf_chart + vertline + horizontalline)
 
     if graph == True: 
         return results_df, result_graph
