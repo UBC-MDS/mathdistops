@@ -6,7 +6,7 @@ import numpy as np
 import altair as alt
 import pandas as pd
 
-def pnorm(q=None, mean = 0, std_dev =1, graph = True):
+def pnorm(q, mean = 0, std_dev =1, graph = True):
     """
     Calculates Cumulative Probability of the normal distribution at this quantile and plots corresponding PDF and CDF.
 

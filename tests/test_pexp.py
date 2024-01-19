@@ -30,11 +30,11 @@ def test_df_results_pexp():
 
 def test_missing_input_pexp():
     """
-    Test case for ValueError when parameter `q` is missing in pexp.
+    Test case for TypeError when parameter `q` is missing in pexp.
     """
-    with pytest.raises(ValueError) as custom_string:
+    with pytest.raises(TypeError) as custom_string:
         results, graph = pexp()
-    assert str(custom_string.value) == "Parameter 'q' is required.", "Expected a ValueError for missing 'q' parameter"
+    assert str(custom_string.value) == "pexp() missing 1 required positional argument: 'q'"
 
 def test_nonsensical_input_pexp():
     """
@@ -46,7 +46,11 @@ def test_nonsensical_input_pexp():
 
     with pytest.raises(TypeError) as custom_string:
         results = pexp('hi', rate=2, graph=False)
-    assert str(custom_string.value), "Input parameters must be numerical."
+    assert str(custom_string.value) == "Input parameters must be numerical."
+
+    with pytest.raises(ValueError) as custom_string:
+        results = pexp(None)
+    assert str(custom_string.value) == "Parameter 'q' is required."
 
 def test_figure_components_pexp():
     """

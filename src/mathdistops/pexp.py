@@ -3,7 +3,7 @@ import numpy as np
 import altair as alt
 import pandas as pd
 
-def pexp(q=None, rate=1, graph=True):
+def pexp(q, rate=1, graph=True):
     """
     Calculates the cumulative probability of the exponential distribution at this quantile and plots corresponding PDF and CDF.
 
