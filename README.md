@@ -26,14 +26,22 @@ This package uses [Poetry](https://python-poetry.org/) for dependency management
     git clone https://github.com/UBC-MDS/mathdistops.git
     cd mathdistops
     ```
+3. **Install the virtual environment**:
 
-3. **Install the Package with Poetry**: Use Poetry to install the package and its dependencies.
+   ```bash
+    conda env create -f environment.yml
+    ```
+4. **Activate the installed environment**:
+
+  ```bash
+    conda activate mathdistops
+  ```
+
+5. **Install the Package with Poetry**: Use Poetry to install the package and its dependencies.
 
     ```bash
     poetry install
     ```
-
-    This command creates a virtual environment and installs all the necessary dependencies.
 
 ## Usage
 
