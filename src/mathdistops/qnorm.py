@@ -50,16 +50,14 @@ def qnorm(p, mean=0, std_dev=1, graph=True):
     if p is None:
         raise ValueError("Parameter 'p' is required.")
 
+    if not all(isinstance(param, (int, float)) for param in [p, mean, std_dev]):
+        raise TypeError("Input parameters must be numerical.")
+
     if p<0 or p>1:
         raise ValueError("Parameter 'p' stands for probability, which should have a value between 0 and 1 only.")
 
     if std_dev <= 0:
         raise ValueError("Standard deviation cannot be zero or negative.")
-
-    if not all(isinstance(param, (int, float)) for param in [p, mean, std_dev]):
-        raise TypeError("Input parameters must be numerical.")
-
-    # Q(p; μ, σ) = μ + σ * sqrt(2) * erfinv(2p - 1)
 
     #Calculate quantile
     q = mean + std_dev * math.sqrt(2) * erfinv(2*p - 1)
