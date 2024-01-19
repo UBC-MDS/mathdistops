@@ -2,22 +2,24 @@ from mathdistops.qexp import qexp
 import pytest
 import altair as alt
 import numpy as np
+import pandas as pd
 
 def test_quantile_calculation():
     """
     Tests whether function calculates quantile correctly.
     """
     # Known values for specific cases
-    assert qexp(0.5, 1, False)== -np.log(0.5)
-    assert qexp(0.75, 2, False)== -np.log(0.25) / 2
+    assert qexp(0.5, 1, False)['Quantile'].iloc[0]== -np.log(0.5)
+    assert qexp(0.75, 2, False)['Quantile'].iloc[0]== -np.log(0.25) / 2
 
 def test_output_datatypes():
     """
     Tests whether function returns correct output data types.
     """
-    quantile, chart = qexp(0.5, 1, graph=True)
-    assert isinstance(quantile, float)
-    assert isinstance(chart, alt.LayerChart) or chart is None
+    df, chart = qexp(0.5, 1, graph=True)
+    assert isinstance(df, pd.DataFrame)
+    assert hasattr(chart, 'hconcat')
+    assert len(chart.hconcat) == 2
 
 
 def test_invalid_probability_input():
@@ -54,5 +56,5 @@ def test_graph_properties():
     Tests if the plot has the correct properties.
     """
     _, chart = qexp(0.5, 1, graph=True)
-    assert isinstance(chart, alt.LayerChart)
-    assert len(chart.layer) == 3  
+    assert hasattr(chart, 'hconcat')
+    assert len(chart.hconcat) == 2
