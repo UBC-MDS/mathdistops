@@ -7,12 +7,19 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = ">=3.9"
+scipy = ">=1.11.4"
+matplotlib = ">=3.8.2"
+numpy = ">=1.26.3"
+pandas = ">=2.1.4"
+altair = ">=5.2.0"
 
 [tool.poetry.dev-dependencies]
 
 [tool.poetry.group.dev.dependencies]
-pytest-cov = "^4.1.0"
+pytest = ">=7.4.4"
+pytest-cov = ">=4.1.0"
+
 
 [tool.semantic_release]
 version_variable = "pyproject.toml:version" # version location

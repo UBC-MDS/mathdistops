@@ -1,7 +1,9 @@
 import numpy as np
 import altair as alt
 import pandas as pd
+
 def qexp(p=0.5, rate=1, graph=True):
+
     """
     Calculates the quantile corresponding to given cumulative probability in an exponential distribution and plots the corresponding distribution.
 
@@ -93,3 +95,4 @@ def qexp(p=0.5, rate=1, graph=True):
         return results_df, chart
     
     return results_df
+

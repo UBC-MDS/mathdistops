@@ -12,6 +12,7 @@ def test_quantile_calculation():
     assert qexp(0.5, 1, False)['Quantile'].iloc[0]== -np.log(0.5)
     assert qexp(0.75, 2, False)['Quantile'].iloc[0]== -np.log(0.25) / 2
 
+
 def test_output_datatypes():
     """
     Tests whether function returns correct output data types.
@@ -39,6 +40,7 @@ def test_invalid_probability_input():
     assert str(excinfo.value) == "Cumulative probability must be between 0 and 1, exclusive of 1"
 
 
+
 def test_invalid_rate_input():
     """
     Tests function's response to invalid rate values.
@@ -58,3 +60,4 @@ def test_graph_properties():
     _, chart = qexp(0.5, 1, graph=True)
     assert hasattr(chart, 'hconcat')
     assert len(chart.hconcat) == 2
+

@@ -16,20 +16,44 @@ Our team listed in alphabetical order:
 - Sandra Gross
 
 ## Installation
-The installation package is being worked on, and will be ready in the near future. Instead of the command below, clone the repository and run `poetry install` for using the package.  
+This package uses [Poetry](https://python-poetry.org/) for dependency management and packaging. It is not yet available for installation via `pip`. To install and use this package, please follow these steps:
 
-```bash
-$ pip install mathdistops
+1. **Install Poetry**: If you don't have Poetry installed, install it by following the official [installation guide](https://python-poetry.org/docs/#installation).
+
+2. **Clone the Repository**: Clone this repository to your local machine.
+
+    ```bash
+    git clone https://github.com/UBC-MDS/mathdistops.git
+    cd mathdistops
+    ```
+
+3. **Install the Package with Poetry**: Use Poetry to install the package and its dependencies.
+
+    ```bash
+    poetry install
+    ```
+
+    This command creates a virtual environment and installs all the necessary dependencies.
+
+## Usage
+
+To use this package, you can import and call its functions in your Python scripts. Here's an example:
+
+```python
+from mathdistops import pnorm
+
+result = pnorm(1, mean=0, std_dev=1)
+print(result)
 ```
 
 ## Functions
-- pexp(x, rate, plot_graph=False): Represents the Cumulative Distribution Function of the exponential distribution characterized by a given parameter `rate`. The function calculates the cumulative probability for a given quantile `x` and can plot the corresponding distribution. 
+- pexp(q=None, rate=1, graph=True): Represents the Cumulative Distribution Function of the exponential distribution characterized by a given parameter `rate`. The function calculates the cumulative probability for a given quantile `q` and can plot the corresponding distribution. 
 
-- qexp(p, rate, plot_graph=False): Quantile Function of an exponential distribution, characterized by a given rate parameter `rate`. The function calculates the quantile corresponding to given cumulative probability `p` in an exponential distribution. Optionally, it can also generate and return a visualization of the distribution.
+- qexp(p, rate, graph=False): Quantile Function of an exponential distribution, characterized by a given rate parameter `rate`. The function calculates the quantile corresponding to given cumulative probability `p` in an exponential distribution. Optionally, it can also generate and return a visualization of the distribution.
 
-- pnorm(x, mean=0, std_dev=1, plot_graph=True): Cumulative Distribution Function of the normal distribution with specified mean and standard deviation. It will return the cumulative probability up to the given value `x`. Optionally, it can generate and return a visualization of the distribution.
+- pnorm(x, mean=0, std_dev=1, graph=True): Cumulative Distribution Function of the normal distribution with specified mean and standard deviation. It will return the cumulative probability up to the given value `x`. Optionally, it can generate and return a visualization of the distribution.
 
-- qnorm(p, mean=0, std_dev=1, plot_graph=True): Calculates the quantile (Inverse Cumulative Distribution Function) corresponding to a specified cumulative probability `p` of the normal distribution with specified mean and standard deviation. Optionally, it can also generate and return a visualization of the distribution.
+- qnorm(p, mean=0, std_dev=1, graph=True): Calculates the quantile (Inverse Cumulative Distribution Function) corresponding to a specified cumulative probability `p` of the normal distribution with specified mean and standard deviation. Optionally, it can also generate and return a visualization of the distribution.
 
 ## Python Ecosystem Integration
 While python has relevant functions for normal and exponential distribution in the scipy.stats package, this package offer an in-built additional functionality of returning the plot to help with visualization and understanding the problem. 
@@ -37,9 +61,6 @@ While python has relevant functions for normal and exponential distribution in t
 ### Related Packages:
 - [scipy.stats.norm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html) is an official scipy package to represent a normal continuous random variable.
 - [scipy.stats.expon](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.expon.html) is an official scipy package to represent an exponential continuous random variable.
-
-## Usage
-- Usage instructions to be updated in the near future. 
 
 ## Contributing
 
