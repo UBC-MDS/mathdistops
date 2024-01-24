@@ -647,6 +647,21 @@ files = [
 ]
 
 [[package]]
+name = "palmerpenguins"
+version = "0.1.4"
+description = "A python package for the palmer penguins dataset"
+optional = false
+python-versions = "*"
+files = [
+    {file = "palmerpenguins-0.1.4-py3-none-any.whl", hash = "sha256:63c904db3dcef10e4ff1372f9b7f50a8f44c7364cc03f27f9a487fe5762d159c"},
+    {file = "palmerpenguins-0.1.4.tar.gz", hash = "sha256:d04d9064930e053fb0805261fe2aa26b4581fdabacaa54d393ddd65bb93bbaf2"},
+]
+
+[package.dependencies]
+numpy = "*"
+pandas = "*"
+
+[[package]]
 name = "pandas"
 version = "2.1.4"
 description = "Powerful data structures for data analysis, time series, and statistics"
@@ -1131,4 +1146,4 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9"
-content-hash = "fe802fb189b190857244bbd0ba6e32493fc0b75b9005b56dbc6e2d22e102cca4"
+content-hash = "f0978096b43735d59f041f4947e5aee9f88a36882d5f9aed606d497550c27122"
