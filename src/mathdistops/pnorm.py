@@ -71,7 +71,7 @@ def pnorm(q, mean = 0, std_dev =1, graph = True):
     )
     
     #Add a shaded area under the curve ()
-    shade_area = alt.Chart(df, title=f"Probability Density Function for q = {q}, mean = {mean}, sd = {std_dev}").mark_area(opacity=0.3, color='lightblue').encode(
+    shade_area = alt.Chart(df, title=f"Probability Density Function for q = {q:.4g}, mean = {mean:.4g}, sd = {std_dev:.4g}").mark_area(opacity=0.3, color='lightblue').encode(
         x=alt.X('x', title='X'),
         y=alt.Y('pdf', title='f(X)')
     ).transform_filter(
@@ -84,7 +84,7 @@ def pnorm(q, mean = 0, std_dev =1, graph = True):
     )
 
     #CDF
-    cdf_chart = alt.Chart(df, title=f"Cumulative Distribution Chart for q = {q}, mean = {mean}, sd = {std_dev}").mark_line().encode(
+    cdf_chart = alt.Chart(df, title=f"Cumulative Distribution Chart for q = {q:.4g}, mean = {mean:.4g}, sd = {std_dev:.4g}").mark_line().encode(
         x=alt.X('x').title("x"),
         y=alt.Y('cdf').title('probability'),
         color=alt.value('orange'),

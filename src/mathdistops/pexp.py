@@ -64,7 +64,7 @@ def pexp(q, rate=1, graph=True):
         x='x',
         y='pdf'
     ).properties(
-        title=f'Probability Density Function for q = {q}, rate = {rate}',
+        title=f'Probability Density Function for q = {q:.4g}, rate = {rate:.4g}',
         width=300,
         height=300
     )
@@ -89,7 +89,7 @@ def pexp(q, rate=1, graph=True):
         color=alt.value('orange'),
         opacity=alt.value(0.5),
     ).properties(
-        title=f'Cumulative Distribution Function for q = {q}, rate = {rate}',
+        title=f'Cumulative Distribution Function for q = {q:.4g}, rate = {rate:.4g}',
         width=300,
         height=300
     )
