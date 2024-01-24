@@ -19,6 +19,7 @@ altair = ">=5.2.0"
 [tool.poetry.group.dev.dependencies]
 pytest = ">=7.4.4"
 pytest-cov = ">=4.1.0"
+palmerpenguins = ">=0.1.4"
 
 
 [tool.semantic_release]
