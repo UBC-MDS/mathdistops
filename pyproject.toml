@@ -20,6 +20,9 @@ altair = ">=5.2.0"
 pytest = ">=7.4.4"
 pytest-cov = ">=4.1.0"
 palmerpenguins = ">=0.1.4"
+myst-nb = {version = "^1.0.0", python = "^3.9"}
+sphinx-autoapi = "^3.0.0"
+sphinx-rtd-theme = "^2.0.0"
 
 
 [tool.semantic_release]
