@@ -17,3 +17,7 @@
 - Added code and tests for the function [pexp](https://github.com/UBC-MDS/mathdistops/commit/0294fc3b6dd6de193e65c478039c7ebf3fe3c936)
 - Added [code](https://github.com/UBC-MDS/mathdistops/commit/8edc6efeb2c0e6c7fd7903313aecdb17d307da5a) and [tests](https://github.com/UBC-MDS/mathdistops/commit/0916bb33b639abd81cf4d0dfab949c8c500a0269) for the function qexp
 - Updated [README](https://github.com/UBC-MDS/mathdistops/commit/7120b8df774f610c99a44103c45f8d95a215445a) with Usage section
+
+### Added Milestone 3
+- Added example usages for [normal functions](https://github.com/UBC-MDS/mathdistops/commit/aae981bee22f116c318372d9c87e07558a4c7b18)
+- Added example usages for [exponential functions]
