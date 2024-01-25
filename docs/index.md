@@ -6,8 +6,8 @@
 :hidden:
 :caption: Tutorials
 
-example.ipynb
 example_norm.ipynb
+example_exp.ipynb
 ```
 
 ```{toctree}
