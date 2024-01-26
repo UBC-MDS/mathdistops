@@ -64,7 +64,7 @@ fig
 ```
 Below is a sample usage on Jupyter Notebook. 
 
-<Sample_Usage src="https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample.jpg?raw=true" width="300"/>
+<img src="https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample.jpg?raw=true" style="width: 750px;"/>
 
 ### Running unit tests
 
