@@ -2,7 +2,7 @@
 
 This package provides statistical functions for normal and exponential distributions, including pnorm, qnorm, pexp, and qexp. Each function not only performs the respective statistical calculation but also generates the corresponding plot of the distribution, offering both numerical results and visual outputs.
 
-![](https://github.com/UBC-MDS/mathdistops/blob/test_image_README/img/test01.jpg)
+![](https://github.com/UBC-MDS/mathdistops/blob/test_image_README/img/test01.jpg?raw=true)
 
 
 [![ci-cd](https://github.com/UBC-MDS/mathdistops/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/mathdistops/actions/workflows/ci-cd.yml) 
@@ -63,7 +63,7 @@ print(df)
 fig
 ```
 Below is a sample usage on Jupyter Notebook. 
-![Sample Usage](https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample.jpg)
+![Sample Usage](https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample.jpg?raw=true)
 
 ### Running unit tests
 
