@@ -33,10 +33,6 @@ def qexp(p, rate=1, graph=True):
     --------
     >>> qexp(0.5, rate=1, graph=True)
     (0.6931471805599453, [Matplotlib Figure Object])
-
-    Notes
-    -----
-    The function will raise a ValueError if `p` is not in the range [0, 1] or if `rate` is non-positive.
     """
 
     if p is None:
