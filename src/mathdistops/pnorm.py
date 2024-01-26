@@ -28,14 +28,6 @@ def pnorm(q, mean = 0, std_dev =1, graph = True):
             layered altair Chart consisting of two graphs, CDF and PDF
         If `graph` is False, returns a pandas DataFrame.
 
-    Formula
-    -------
-    F(x; μ, σ) = (1 / 2) * [1 + erf((x - μ) / (σ * sqrt(2)))]
-
-    The CDF describes the probability that a random variable in a normal distribution
-    is less than or equal to a specified value `x`. It is characterized by the mean (`μ`)
-    and standard deviation (`σ`), determining the center and spread of the distribution.
-
     Example
     --------
     >>> pnorm(1, mean=0, std_dev=1)

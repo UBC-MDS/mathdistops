@@ -28,18 +28,6 @@ def qnorm(p, mean=0, std_dev=1, graph=True):
             layered altair Chart consisting of two graphs, CDF and PDF
         If `graph` is False, returns a pandas DataFrame..
 
-    Formula
-    -------
-    Q(p; μ, σ) = μ + σ * sqrt(2) * erfinv(2p - 1)
-
-    The quantile represents the value below which a given proportion of the distribution
-    falls. It is characterized by the mean (`μ`) and standard deviation (`σ`), determining
-    the center and spread of the distribution.
-
-    The CDF describes the probability that a random variable in a normal distribution
-    is less than or equal to a specified value `x`. It is characterized by the mean (`μ`)
-    and standard deviation (`σ`), determining the center and spread of the distribution.
-
     Example
     -------
     >>> qnorm(0.8413447460685429, mean=0, std_dev=1)
