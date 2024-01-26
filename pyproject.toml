@@ -26,6 +26,7 @@ sphinx-autoapi = ">=3.0.0"
 sphinx-rtd-theme = ">=2.0.0"
 sphinx = ">=2.4.3"
 sphinxcontrib-napoleon = ">=0.7"
+numexpr = "^2.8.8"
 
 
 [tool.semantic_release]
