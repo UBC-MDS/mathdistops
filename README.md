@@ -8,6 +8,7 @@ This package provides statistical functions for normal and exponential distribut
 [![ci-cd](https://github.com/UBC-MDS/mathdistops/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/mathdistops/actions/workflows/ci-cd.yml) 
 [![codecov](https://codecov.io/gh/UBC-MDS/mathdistops/branch/main/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/mathdistops)
 [![Python 3.9.0](https://img.shields.io/badge/python-3.9.0-blue.svg)](https://www.python.org/downloads/release/python-390/) 
+[![Documentation Status](https://readthedocs.org/projects/mathdistops/badge/?version=latest)](https://mathdistops.readthedocs.io/en/latest/?badge=latest)
 ![codesize](https://img.shields.io/github/languages/code-size/UBC-MDS/MathDistOps)
 [![version](https://img.shields.io/github/v/release/UBC-MDS/mathdistops)](https://github.com/UBC-MDS/mathdistops/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
