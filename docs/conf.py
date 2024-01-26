@@ -20,6 +20,7 @@ extensions = [
     "autoapi.extension",
     "sphinx.ext.napoleon",
     "sphinx.ext.viewcode",
+    'sphinx.ext.mathjax'
 ]
 autoapi_dirs = ["../src"]
 
@@ -34,8 +35,3 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
-html_static_path = ['_static']
-html_logo = 'img/logo.png'
-html_theme_options = {
-    'logo_only': True
-}
