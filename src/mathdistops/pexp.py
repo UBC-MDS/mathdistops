@@ -52,13 +52,17 @@ def pexp(q, rate=1, graph=True):
     df = pd.DataFrame(data)
     
     # PDF
-    chart = alt.Chart(df).mark_line().encode(
+    chart = alt.Chart(
+        df,
+        title=alt.Title(
+        text='Probability Density Function',
+        subtitle=f'for q = {q:.4g}, rate = {rate:.4g}')
+    ).mark_line().encode(
         x='x',
         y='pdf'
     ).properties(
-        title=f'Probability Density Function for q = {q:.4g}, rate = {rate:.4g}',
-        width=300,
-        height=300
+        width=250,
+        height=250
     )
 
     #Add a shaded area under the curve ()
@@ -75,15 +79,19 @@ def pexp(q, rate=1, graph=True):
     )
 
     # CDF
-    cdf_chart = alt.Chart(df).mark_line().encode(
+    cdf_chart = alt.Chart(
+        df,
+        title=alt.Title(
+        text='Cumulative Distribution Function',
+        subtitle=f'for q = {q:.4g}, rate = {rate:.4g}')
+    ).mark_line().encode(
         x=alt.X('x').title("x"),
         y=alt.Y('cdf').title('probability'),
         color=alt.value('orange'),
         opacity=alt.value(0.5),
     ).properties(
-        title=f'Cumulative Distribution Function for q = {q:.4g}, rate = {rate:.4g}',
-        width=300,
-        height=300
+        width=250,
+        height=250
     )
 
     horizontalline = alt.Chart(pd.DataFrame({'p': [prob]})).mark_rule(strokeDash=[3, 3]).encode(
