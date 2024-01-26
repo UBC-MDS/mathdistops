@@ -87,7 +87,7 @@ To get a the code coverage reporting, run this command:
 
 - qexp(p, rate=1, graph=True): Quantile Function of an exponential distribution, characterized by a given rate parameter `rate`. The function calculates the quantile corresponding to given cumulative probability `p` in an exponential distribution. Optionally, it can also generate and return a visualization of the PDF and the CDF.
 
-- pnorm(q, mean = 0, std_dev =1, graph = True): Cumulative Distribution Function of the normal distribution with specified mean and standard deviation. It will return the cumulative probability up to the given value `x`. Optionally, it can generate and return a visualization of the distributions, the PDF and the CDF. 
+- pnorm(q, mean = 0, std_dev =1, graph = True): Cumulative Distribution Function of the normal distribution with specified mean and standard deviation. It will return the cumulative probability up to the given value `q`. Optionally, it can generate and return a visualization of the distributions, the PDF and the CDF. 
 
 - qnorm(p, mean=0, std_dev=1, graph=True): Calculates the quantile (Inverse Cumulative Distribution Function) corresponding to a specified cumulative probability `p` of the normal distribution with specified mean and standard deviation. The function can additionally create and provide a graphical representation of the PDF and the CDF.
 
