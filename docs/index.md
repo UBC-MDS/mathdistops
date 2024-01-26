@@ -1,3 +1,5 @@
+![](https://github.com/UBC-MDS/mathdistops/blob/test_image_README/img/test01.jpg)
+
 ```{include} ../README.md
 ```
 
