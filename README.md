@@ -5,12 +5,12 @@ This package provides statistical functions for normal and exponential distribut
     <img src="https://github.com/UBC-MDS/mathdistops/blob/img_logo/img/mathdistops.png" alt="Alt text for image" width="200" height="200">
 </figure>
 
-![codecov](https://codecov.io/gh/UBC-MDS/mathdistops/branch/main/graph/badge.svg)
-![Python](https://img.shields.io/badge/language-Python-red.svg)
+[![ci-cd](https://github.com/UBC-MDS/mathdistops/actions/workflows/ci-cd.yml/badge.svg)](https://github.com/UBC-MDS/mathdistops/actions/workflows/ci-cd.yml) 
+[![codecov](https://codecov.io/gh/UBC-MDS/mathdistops/branch/main/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/mathdistops)
+[![Python 3.9.0](https://img.shields.io/badge/python-3.9.0-blue.svg)](https://www.python.org/downloads/release/python-390/) 
 ![codesize](https://img.shields.io/github/languages/code-size/UBC-MDS/MathDistOps)
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/UBC-MDS/MathDistOps?include_prereleases)
-![contributors](https://img.shields.io/github/contributors/UBC-MDS/MathDistOps)
-[![MIT License](https://img.shields.io/badge/License-MIT-informational?style=flat-square)](LICENSE-MIT)
+![version](https://img.shields.io/github/v/release/UBC-MDS/mathdistops) ![release](https://img.shields.io/github/release-date/UBC-MDS/mathdistops)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Contributors
 Our team listed in alphabetical order:
