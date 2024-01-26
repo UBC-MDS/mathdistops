@@ -52,13 +52,18 @@ def qexp(p, rate=1, graph=True):
         data = pd.DataFrame({'x': x_values, 'PDF': pdf_values, 'CDF': cdf_values, 'q': quantile})
 
         # PDF plot
-        pdf_chart = alt.Chart(data).mark_line().encode(
+        pdf_chart = alt.Chart(
+            data,
+            title=alt.Title(
+                text='Probability Density Function',
+                subtitle=f'for p = {p:.4g}, rate = {rate:.4g}'
+            )
+        ).mark_line().encode(
             x='x',
             y='PDF'
         ).properties(
-            title=f'Exponential Distribution PDF (p = {p:.4g}, rate = {rate:.4g})',
-            width=300,
-            height=300
+            width=250,
+            height=250
         )
         vertline = alt.Chart(pd.DataFrame({'x': [quantile]})).mark_rule(strokeDash=[3, 3]).encode(
             x='x',
@@ -71,15 +76,20 @@ def qexp(p, rate=1, graph=True):
             alt.datum.x <= quantile
         )
 
-        cdf_chart = alt.Chart(data).mark_line().encode(
-        x=alt.X('x').title("x"),
-        y=alt.Y('CDF').title('probability'),
-        color=alt.value('orange'),
-        opacity=alt.value(0.5),
+        cdf_chart = alt.Chart(
+            data,
+            title=alt.Title(
+                text='Cumulative Distribution Function',
+                subtitle=f'for p = {p:.4g}, rate = {rate:.4g}'
+            )
+        ).mark_line().encode(
+            x=alt.X('x').title("x"),
+            y=alt.Y('CDF').title('probability'),
+            color=alt.value('orange'),
+            opacity=alt.value(0.5),
         ).properties(
-        title=f'Cumulative Distribution Function (p = {p:.4g}, rate = {rate:.4g})',
-        width=300,
-        height=300
+            width=250,
+            height=250
         )
       
         vertline = alt.Chart(pd.DataFrame({'q': [quantile]})).mark_rule(strokeDash=[3, 3]).encode(
