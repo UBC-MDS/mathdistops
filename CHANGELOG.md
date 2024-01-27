@@ -16,4 +16,4 @@
 
 ### Added Milestone 3
 - Added example usages for [normal functions](https://github.com/UBC-MDS/mathdistops/commit/aae981bee22f116c318372d9c87e07558a4c7b18)
-- Added example usages for [exponential functions]
+- Added example usages for [exponential functions](https://github.com/UBC-MDS/mathdistops/commit/5ec71286f723739a71aea803213ea00141bb6b33)
