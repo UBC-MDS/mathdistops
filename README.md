@@ -81,7 +81,6 @@ To get a the code coverage reporting, run this command:
     $ poetry run pytest --cov-branch --cov=mathdistops
 ```
 
-
 ## Functions
 ### Description
 - pexp(q, rate=1, graph=True): Represents the Cumulative Distribution Function (CDF) of the exponential distribution characterized by a given parameter `rate`. The function calculates the cumulative probability for a given quantile `q` and plots the corresponding probability distribution (PDF) and the CDF. 
