@@ -2,6 +2,31 @@
 
 
 
+## v2.0.2 (2024-01-30)
+
+### Fix
+
+* fix: remove environment file ([`a1b017f`](https://github.com/UBC-MDS/mathdistops/commit/a1b017fddd7b7b75fa7b202391e40d28d227bf31))
+
+* fix: virtual environment via poetry ([`29570f4`](https://github.com/UBC-MDS/mathdistops/commit/29570f43f80e91a0b4225ffe48400c3a5174b0f3))
+
+### Unknown
+
+* Merge pull request #101 from UBC-MDS/ci-cd
+
+Ci-cd ([`d69dbc5`](https://github.com/UBC-MDS/mathdistops/commit/d69dbc535caf3f73828bbeb4f2e843a81a1e4832))
+
+* Fix: Feedback addressed by removing environment file and fixing dependencies on Poetry ([`0caba18`](https://github.com/UBC-MDS/mathdistops/commit/0caba18d9c098e4383dd704b2cbca068cc7b5a01))
+
+* Update ci-cd.yml
+
+Changes to ci-cd ([`5684497`](https://github.com/UBC-MDS/mathdistops/commit/5684497085dac8dd7770eed06c2acd6c1e0354e9))
+
+* Update pyproject.toml
+
+Change the psr table in pyproject.toml ([`da79623`](https://github.com/UBC-MDS/mathdistops/commit/da796237a8794fd7b69ebf948bbd37c7c824533a))
+
+
 ## v2.0.1 (2024-01-30)
 
 ### Fix

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mathdistops"
-version = "2.0.1"
+version = "2.0.2"
 description = "This package provides function for calculating pnorm, qnorm, pexp and qexp."
 authors = ["Ziwei Chen, Kun Ya,Sivakorn Oak Chong, Sandra Gross"]
 license = "MIT"
