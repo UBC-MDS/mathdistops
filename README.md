@@ -19,6 +19,7 @@ Our team listed in alphabetical order:
 - Kun Ya
 - Oak Chong
 - Sandra Gross
+  
 
 ## Installation
 This package uses [Poetry](https://python-poetry.org/) for dependency management and packaging. It is not yet available for installation via `pip`. To install and use this package, please follow these steps:
