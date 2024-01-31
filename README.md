@@ -70,7 +70,7 @@ print(df_qnorm)
 fig_qnorm
 ```
 Below is the sample usage on Jupyter Notebook. 
-<img src="https://github.com/UBC-MDS/mathdistops/img/usage_sample_norm.png?raw=true" style="width: 750px;"/>
+<img src="https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample_norm.png?raw=true" style="width: 750px;"/>
 
 Similar to `pnorm` and `qnorm` for the normal distribution, `pexp` and `qexp` provide functionality for the exponential distribution. They produce a DataFrame summarizing the data and also generate graphs for the PDF and CDF, with the results highlighted on the graphs.
 
@@ -91,7 +91,7 @@ print(df_qexp)
 fig_qexp
 ```
 Below is a sample usage on Jupyter Notebook.
-<img src="https://github.com/UBC-MDS/mathdistops/img/usage_sample_exp.png?raw=true" style="width: 750px;"/>
+<img src="https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample_exp.png?raw=true" style="width: 750px;"/>
 
 
 ### Running unit tests
