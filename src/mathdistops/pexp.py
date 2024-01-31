@@ -29,8 +29,9 @@ def pexp(q, rate=1, graph=True):
 
     Examples
     --------
-    >>> pexp(0.5, rate=1, graph=True)
-    (0.3934693402873666, [Matplotlib Figure Object])
+    >>> pexp(0.5, rate=1, graph=False)
+        Quantile    Cumulative probability
+    0   0.5         0.393469
     """
     if q is None:
         raise ValueError("Parameter 'q' is required.")
@@ -45,63 +46,63 @@ def pexp(q, rate=1, graph=True):
     prob = 1 - math.exp(-rate * q)
     results_df = pd.DataFrame({'Quantile': [q], 'Cumulative probability': [prob]})
 
-    x_values = np.linspace(0, q + 3 / rate, 1000)
-    y_values_pdf = rate * np.exp(-rate * x_values)
-    y_values_cdf = 1 - np.exp(-rate * x_values)
-    data = {'x': x_values, 'pdf': y_values_pdf, 'cdf': y_values_cdf, 'q': q}
-    df = pd.DataFrame(data)
-    
-    # PDF
-    chart = alt.Chart(
-        df,
-        title=alt.Title(
-        text='Probability Density Function',
-        subtitle=f'for q = {q:.4g}, rate = {rate:.4g}')
-    ).mark_line().encode(
-        x='x',
-        y='pdf'
-    ).properties(
-        width=250,
-        height=250
-    )
+    if graph:
+        x_values = np.linspace(0, q + 3 / rate, 1000)
+        y_values_pdf = rate * np.exp(-rate * x_values)
+        y_values_cdf = 1 - np.exp(-rate * x_values)
+        data = {'x': x_values, 'pdf': y_values_pdf, 'cdf': y_values_cdf, 'q': q}
+        df = pd.DataFrame(data)
+        
+        # PDF
+        chart = alt.Chart(
+            df,
+            title=alt.Title(
+            text='Probability Density Function',
+            subtitle=f'for q = {q:.4g}, rate = {rate:.4g}')
+        ).mark_line().encode(
+            x='x',
+            y='pdf'
+        ).properties(
+            width=250,
+            height=250
+        )
 
-    #Add a shaded area under the curve ()
-    shade_area = alt.Chart(df).mark_area(opacity=0.3, color='lightblue').encode(
-        x=alt.X('x', title='X'),
-        y=alt.Y('pdf', title='f(X)')
-    ).transform_filter(
-        alt.datum.x <= q  
-    )
+        #Add a shaded area under the curve ()
+        shade_area = alt.Chart(df).mark_area(opacity=0.3, color='lightblue').encode(
+            x=alt.X('x', title='X'),
+            y=alt.Y('pdf', title='f(X)')
+        ).transform_filter(
+            alt.datum.x <= q  
+        )
 
-    # Add vertical line at respective quantile 
-    vertline = alt.Chart(pd.DataFrame({'q': [q]})).mark_rule(strokeDash=[3, 3]).encode(
-        x='q'
-    )
+        # Add vertical line at respective quantile 
+        vertline = alt.Chart(pd.DataFrame({'q': [q]})).mark_rule(strokeDash=[3, 3]).encode(
+            x='q'
+        )
 
-    # CDF
-    cdf_chart = alt.Chart(
-        df,
-        title=alt.Title(
-        text='Cumulative Distribution Function',
-        subtitle=f'for q = {q:.4g}, rate = {rate:.4g}')
-    ).mark_line().encode(
-        x=alt.X('x').title("x"),
-        y=alt.Y('cdf').title('probability'),
-        color=alt.value('orange'),
-        opacity=alt.value(0.5),
-    ).properties(
-        width=250,
-        height=250
-    )
+        # CDF
+        cdf_chart = alt.Chart(
+            df,
+            title=alt.Title(
+            text='Cumulative Distribution Function',
+            subtitle=f'for q = {q:.4g}, rate = {rate:.4g}')
+        ).mark_line().encode(
+            x=alt.X('x').title("x"),
+            y=alt.Y('cdf').title('probability'),
+            color=alt.value('orange'),
+            opacity=alt.value(0.5),
+        ).properties(
+            width=250,
+            height=250
+        )
 
-    horizontalline = alt.Chart(pd.DataFrame({'p': [prob]})).mark_rule(strokeDash=[3, 3]).encode(
-        y='p'
-    )
+        horizontalline = alt.Chart(pd.DataFrame({'p': [prob]})).mark_rule(strokeDash=[3, 3]).encode(
+            y='p'
+        )
 
-    # Combine all plots
-    result_graph = (shade_area + chart + vertline) |(cdf_chart + vertline + horizontalline)
+        # Combine all plots
+        result_graph = (shade_area + chart + vertline) |(cdf_chart + vertline + horizontalline)
 
-    if graph == True: 
         return results_df, result_graph
-    else:
-        return results_df
+
+    return results_df
