@@ -28,6 +28,14 @@ def pnorm(q, mean = 0, std_dev =1, graph = True):
             layered altair Chart consisting of two graphs, CDF and PDF
         If `graph` is False, returns a pandas DataFrame.
 
+    Formula
+    -------
+    F(x; μ, σ) = (1 / 2) * [1 + erf((x - μ) / (σ * sqrt(2)))]
+
+    The CDF describes the probability that a random variable in a normal distribution
+    is less than or equal to a specified value `x`. It is characterized by the mean (`μ`)
+    and standard deviation (`σ`), determining the center and spread of the distribution.
+
     Example
     --------
     >>> pnorm(1, mean=0, std_dev=1, graph=False)
@@ -51,40 +59,58 @@ def pnorm(q, mean = 0, std_dev =1, graph = True):
     results_df = pd.DataFrame({'Z-score': [z], 'Cumulative probability': [prob]})
     
     if graph: 
+        
         x_values = np.linspace(mean - 3 * std_dev, mean + 3 * std_dev, 100)
         y_values_pdf = stats.norm.pdf(x_values, mean, std_dev)
         y_values_cdf = stats.norm.cdf(x_values, mean, std_dev)
         data = {'x': x_values, 'pdf': y_values_pdf, 'cdf': y_values_cdf, 'q': q}
         df = pd.DataFrame(data)
-        
+
         # PDF
-        chart = alt.Chart(df).mark_line().encode(
+        chart = alt.Chart(
+            df,
+            title=alt.Title(
+            text='Probability Density Function',
+            subtitle=f'for q = {q:.4g},mean = {mean:.4g},sd = {std_dev:.4g}')
+        ).mark_line().encode(
             x='x',
             y='pdf'
+        ).properties(
+            width=250,
+            height=250
         )
-        
+
+
         #Add a shaded area under the curve ()
-        shade_area = alt.Chart(df, title=f"Probability Density Function for q = {q:.4g}, mean = {mean:.4g}, sd = {std_dev:.4g}").mark_area(opacity=0.3, color='lightblue').encode(
+        shade_area = alt.Chart(df).mark_area(opacity=0.3, color='lightblue').encode(
             x=alt.X('x', title='X'),
             y=alt.Y('pdf', title='f(X)')
         ).transform_filter(
             alt.datum.x <= x  
-        )
-        
+        ).properties(
+            width=250,
+            height=250
+            )
+
         # Add vertical line at respective quantile 
         vertline = alt.Chart(pd.DataFrame({'z': [q]})).mark_rule(strokeDash=[3, 3]).encode(
             x='z'
         )
 
         #CDF
-        cdf_chart = alt.Chart(df, title=f"Cumulative Distribution Chart for q = {q:.4g}, mean = {mean:.4g}, sd = {std_dev:.4g}").mark_line().encode(
+        cdf_chart = alt.Chart(
+            df, 
+            title=alt.Title(
+            text="Cumulative Distribution Chart",
+            subtitle= f'for q = {q:.4g}, mean = {mean:.4g}, sd = {std_dev:.4g}')
+            ).mark_line().encode(
             x=alt.X('x').title("x"),
             y=alt.Y('cdf').title('probability'),
             color=alt.value('orange'),
             opacity=alt.value(0.5),
         ).properties(
-            width=300,
-            height=300
+            width=250,
+            height=250
         )
 
         # Add horiozontal line at respective p
