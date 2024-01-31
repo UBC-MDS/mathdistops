@@ -1,6 +1,7 @@
 # mathdistops
 
-This package provides statistical functions for normal and exponential distributions, including pnorm, qnorm, pexp, and qexp. Each function not only performs the respective statistical calculation but also generates the corresponding plot of the distribution, offering both numerical results and visual outputs.
+Mathdistops is a statistical package crafted to facilitate in-depth analysis and visualization of normal and exponential distributions, pivotal for a wide array of statistical modeling and data analysis tasks. It features a core set of functions (pnorm, qnorm, pexp, and qexp) capable of calculating cumulative probabilities and quantiles, while simultaneously generating plots of both the probability density function (PDF) and the cumulative distribution function (CDF) for each distribution. 
+Thus, this package stands out as an indispensable tool for statisticians, data scientists, and researchers seeking to derive meaningful insights from their data. 
 
 ![](https://github.com/UBC-MDS/mathdistops/blob/main/img/mathdistops.jpg?raw=true)
 
