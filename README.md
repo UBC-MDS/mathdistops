@@ -72,14 +72,14 @@ Below is a sample usage on Jupyter Notebook.
 To run unit tests for this package, execute the following in the project root directory: 
 
 ```bash
-    $ poetry run pytest
+poetry run pytest
 ```
 
 To get a the code coverage reporting, run this command:
 
 ```bash
-    $ poetry run pytest --cov=mathdistops
-    $ poetry run pytest --cov-branch --cov=mathdistops
+poetry run pytest --cov=mathdistops
+poetry run pytest --cov-branch --cov=mathdistops
 ```
 
 ## Functions
