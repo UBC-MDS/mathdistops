@@ -43,8 +43,11 @@ def pexp(q, rate=1, graph=True):
         raise TypeError("Input parameters must be numerical.")
         
     # Calculate cumulative probability
-    prob = 1 - math.exp(-rate * q)
-    results_df = pd.DataFrame({'Quantile': [q], 'Cumulative probability': [prob]})
+    if q >= 0:
+        prob = 1 - math.exp(-rate * q)
+        results_df = pd.DataFrame({'Quantile': [q], 'Cumulative probability': [prob]})
+    if q < 0:
+        results_df = pd.DataFrame({'Quantile': [q], 'Cumulative probability': 0})
 
     if graph:
         x_values = np.linspace(0, q + 3 / rate, 1000)
