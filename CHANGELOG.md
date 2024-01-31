@@ -2,6 +2,25 @@
 
 
 
+## v2.0.3 (2024-01-31)
+
+### Fix
+
+* fix: Feedback addressed by adding hyperlink to contribution and cc ([`35284e6`](https://github.com/UBC-MDS/mathdistops/commit/35284e6dce57c6dce3046486c1531a6ac13b33a9))
+
+* fix: Feedback addressed by adding hyperlink to contribution and cc ([`ffe1dfe`](https://github.com/UBC-MDS/mathdistops/commit/ffe1dfe422e1259dda52ab79d43d0c7933f270a4))
+
+### Unknown
+
+* Merge pull request #117 from UBC-MDS/hyperlink
+
+Hyperlink was added to Contributing file and code of conduct, Please review. ([`02c72c0`](https://github.com/UBC-MDS/mathdistops/commit/02c72c0b168c2fbf64c2bbe080105621baf46e66))
+
+* fix typo ([`2140603`](https://github.com/UBC-MDS/mathdistops/commit/2140603f9250e863dfc1e30dceb6604a703a50d5))
+
+* Fix: Remove Dollar symbols on  README.md ([`1fd61d2`](https://github.com/UBC-MDS/mathdistops/commit/1fd61d20a755e38456d59c3da278a9bf1b01577a))
+
+
 ## v2.0.2 (2024-01-30)
 
 ### Fix
