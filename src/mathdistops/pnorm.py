@@ -30,9 +30,9 @@ def pnorm(q, mean = 0, std_dev =1, graph = True):
 
     Example
     --------
-    >>> pnorm(1, mean=0, std_dev=1)
-    0.8413447460685429
-
+    >>> pnorm(1, mean=0, std_dev=1, graph=False)
+        Z-score    Cumulative probability 
+    0   1.0        0.8413447460685429
     """
     if q is None:
         raise ValueError("Parameter 'q' is required.")

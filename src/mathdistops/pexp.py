@@ -29,8 +29,9 @@ def pexp(q, rate=1, graph=True):
 
     Examples
     --------
-    >>> pexp(0.5, rate=1, graph=True)
-    (0.3934693402873666, [Matplotlib Figure Object])
+    >>> pexp(0.5, rate=1, graph=False)
+        Quantile    Cumulative probability
+    0   0.5         0.393469
     """
     if q is None:
         raise ValueError("Parameter 'q' is required.")

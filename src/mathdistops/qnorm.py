@@ -30,9 +30,9 @@ def qnorm(p, mean=0, std_dev=1, graph=True):
 
     Example
     -------
-    >>> qnorm(0.8413447460685429, mean=0, std_dev=1)
-    1.0
-
+    >>> qnorm(0.8413447460685429, mean=0, std_dev=1, graph=False)
+        Quantile
+    0   1.0
     """
     
     if p is None:

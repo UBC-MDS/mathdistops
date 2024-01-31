@@ -31,8 +31,9 @@ def qexp(p, rate=1, graph=True):
 
     Examples
     --------
-    >>> qexp(0.5, rate=1, graph=True)
-    (0.6931471805599453, [Matplotlib Figure Object])
+    >>> qexp(0.5, rate=1, graph=False)
+        Probability     Quantile
+    0   0.5             0.6931471805599453
     """
 
     if p is None:
