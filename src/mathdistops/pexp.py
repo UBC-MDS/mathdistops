@@ -7,14 +7,14 @@ def pexp(q, rate=1, graph=True):
     """
     Calculates the cumulative probability of the exponential distribution at this quantile and plots corresponding PDF and CDF.
 
-    This function computes the cumulative probability at a specified quantile `x` for an exponential
+    This function computes the cumulative probability at a specified quantile `q` for an exponential
     distribution with a given rate parameter `lambda`. Optionally, it can generate and return a visualization
     corresponding PDF and CDF.
 
     Parameters
     ----------
     q : float
-        The quantile at which to evaluate the CDF. Default is None.
+        The quantile at which to evaluate the CDF.
     rate : float
         The rate parameter (lambda) of the exponential distribution. Default is 1.
     graph : bool
