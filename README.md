@@ -84,18 +84,12 @@ from mathdistops import pnorm, qnorm
 df_pnorm, fig_pnorm = pnorm(1, mean=0, std_dev=1)
 print(df_pnorm)
 fig_pnorm
-
-# Using qnorm to get the quantile for a given cumulative probability in a normal distribution
-df_qnorm, fig_qnorm = qnorm(0.95, mean=0, std_dev=1)
-print(df_qnorm)
-fig_qnorm
 ```
-Below is the sample usage on Jupyter Notebook. 
-<img src="https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample_norm.png?raw=true" style="width: 750px;"/>
 
-Similar to `pnorm` and `qnorm` for the normal distribution, `pexp` and `qexp` provide functionality for the exponential distribution. They produce a DataFrame summarizing the data and also generate graphs for the PDF and CDF, with the results highlighted on the graphs.
+The following image displays a sample usage in a Jupyter Notebook:
+<img src="https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample_pnorm.png?raw=true" style="width: 750px;"/>
 
-Here's an example of how to use pexp and qexp in a Jupyter Notebook:
+Similar to `pnorm` for the normal distribution, `pexp` offers functionality for the exponential distribution. Here's how you can use `pexp` in a Jupyter Notebook:
 
 ```python
 # Run this on jupyter notebook to import pexp and qexp function
@@ -105,14 +99,12 @@ from mathdistops import pexp, qexp
 df_pexp, fig_pexp = pexp(1, rate=1)
 print(df_pexp)
 fig_pexp
-
-# Using qexp to get the quantile for a given cumulative probability in an exponential distribution
-df_qexp, fig_qexp = qexp(0.95, rate=1)
-print(df_qexp)
-fig_qexp
 ```
-Below is a sample usage on Jupyter Notebook.
-<img src="https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample_exp.png?raw=true" style="width: 750px;"/>
+
+Below is an illustration of its usage in a Jupyter Notebook:
+<img src="https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample_pexp.png?raw=true" style="width: 750px;"/>
+
+Regarding `qnorm` and `qexp`, these functions operate similarly, generating a DataFrame that summarizes the data and also producing plots for the `PDF` and `CDF`, with the calculated results indicated on the graphs. However, unlike their counterparts, they accept quantiles as inputs instead of probabilities.
 
 
 ### Running unit tests
