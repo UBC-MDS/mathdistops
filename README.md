@@ -56,16 +56,43 @@ This package uses [Poetry](https://python-poetry.org/) for dependency management
 To use this package, you can import and call its functions in your Python scripts. Here's an example:
 
 ```python
-# Run this on jupyter notebook to show the altair object
-from mathdistops import pnorm
+# Run this on jupyter notebook to import pnorm and qnorm function
+from mathdistops import pnorm, qnorm
 
-df, fig = pnorm(1, mean=0, std_dev=1)
-print(df)
-fig
+# Using pnorm to get the cumulative probability and plot for a normal distribution
+df_pnorm, fig_pnorm = pnorm(1, mean=0, std_dev=1)
+print(df_pnorm)
+fig_pnorm
+
+# Using qnorm to get the quantile for a given cumulative probability in a normal distribution
+df_qnorm, fig_qnorm = qnorm(0.95, mean=0, std_dev=1)
+print(df_qnorm)
+fig_qnorm
 ```
-Below is a sample usage on Jupyter Notebook. 
+Below is the sample usage on Jupyter Notebook. 
+<img src="https://github.com/UBC-MDS/mathdistops/img/usage_sample_norm.png?raw=true" style="width: 750px;"/>
 
-<img src="https://github.com/UBC-MDS/mathdistops/blob/main/img/usage_sample.jpg?raw=true" style="width: 750px;"/>
+Similar to `pnorm` and `qnorm` for the normal distribution, `pexp` and `qexp` provide functionality for the exponential distribution. They produce a DataFrame summarizing the data and also generate graphs for the PDF and CDF, with the results highlighted on the graphs.
+
+Here's an example of how to use pexp and qexp in a Jupyter Notebook:
+
+```python
+# Run this on jupyter notebook to import pexp and qexp function
+from mathdistops import pexp, qexp
+
+# Using pexp to get the cumulative probability and plot for an exponential distribution
+df_pexp, fig_pexp = pexp(1, rate=1)
+print(df_pexp)
+fig_pexp
+
+# Using qexp to get the quantile for a given cumulative probability in an exponential distribution
+df_qexp, fig_qexp = qexp(0.95, rate=1)
+print(df_qexp)
+fig_qexp
+```
+Below is a sample usage on Jupyter Notebook.
+<img src="https://github.com/UBC-MDS/mathdistops/img/usage_sample_exp.png?raw=true" style="width: 750px;"/>
+
 
 ### Running unit tests
 
