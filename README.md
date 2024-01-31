@@ -19,6 +19,21 @@ Our team listed in alphabetical order:
 - Kun Ya
 - Oak Chong
 - Sandra Gross
+
+## Functions
+### Description
+- pexp(q, rate=1, graph=True): Represents the Cumulative Distribution Function (CDF) of the exponential distribution characterized by a given parameter `rate`. The function calculates the cumulative probability for a given quantile `q` and plots the corresponding probability distribution (PDF) and the CDF. 
+
+- qexp(p, rate=1, graph=True): Quantile Function of an exponential distribution, characterized by a given rate parameter `rate`. The function calculates the quantile corresponding to given cumulative probability `p` in an exponential distribution. Optionally, it can also generate and return a visualization of the PDF and the CDF.
+
+- pnorm(q, mean = 0, std_dev =1, graph = True): Cumulative Distribution Function of the normal distribution with specified mean and standard deviation. It will return the cumulative probability up to the given value `q`. Optionally, it can generate and return a visualization of the distributions, the PDF and the CDF. 
+
+- qnorm(p, mean=0, std_dev=1, graph=True): Calculates the quantile (Inverse Cumulative Distribution Function) corresponding to a specified cumulative probability `p` of the normal distribution with specified mean and standard deviation. The function can additionally create and provide a graphical representation of the PDF and the CDF.
+
+A detailed documentation of the functions can be found here: https://mathdistops.readthedocs.io/en/latest/autoapi/index.html
+
+### Documentation
+A detailed guide and tutorial for using these functions can be found on ReadTheDocs. For specific vignettes on the norm functions, please visit: https://mathdistops.readthedocs.io/en/latest/example_norm.html. Additionally, for comprehensive examples on the usage of qexp and pexp, refer to: https://mathdistops.readthedocs.io/en/latest/example_exp.html.
   
 
 ## Installation
@@ -102,7 +117,13 @@ Below is a sample usage on Jupyter Notebook.
 
 ### Running unit tests
 
-To run unit tests for this package, execute the following in the project root directory: 
+To run unit tests for this package, add `pytest` to the environment file, which was created during the installation process via:
+
+```bash
+conda install pytest
+```
+
+Execute the following in the project root directory: 
 
 ```bash
 poetry run pytest
@@ -114,21 +135,6 @@ To get a the code coverage reporting, run this command:
 poetry run pytest --cov=mathdistops
 poetry run pytest --cov-branch --cov=mathdistops
 ```
-
-## Functions
-### Description
-- pexp(q, rate=1, graph=True): Represents the Cumulative Distribution Function (CDF) of the exponential distribution characterized by a given parameter `rate`. The function calculates the cumulative probability for a given quantile `q` and plots the corresponding probability distribution (PDF) and the CDF. 
-
-- qexp(p, rate=1, graph=True): Quantile Function of an exponential distribution, characterized by a given rate parameter `rate`. The function calculates the quantile corresponding to given cumulative probability `p` in an exponential distribution. Optionally, it can also generate and return a visualization of the PDF and the CDF.
-
-- pnorm(q, mean = 0, std_dev =1, graph = True): Cumulative Distribution Function of the normal distribution with specified mean and standard deviation. It will return the cumulative probability up to the given value `q`. Optionally, it can generate and return a visualization of the distributions, the PDF and the CDF. 
-
-- qnorm(p, mean=0, std_dev=1, graph=True): Calculates the quantile (Inverse Cumulative Distribution Function) corresponding to a specified cumulative probability `p` of the normal distribution with specified mean and standard deviation. The function can additionally create and provide a graphical representation of the PDF and the CDF.
-
-A detailed documentation of the functions can be found here: https://mathdistops.readthedocs.io/en/latest/autoapi/index.html
-
-### Documentation
-A detailed guide and tutorial for using these functions can be found on ReadTheDocs. For specific vignettes on the norm functions, please visit: https://mathdistops.readthedocs.io/en/latest/example_norm.html. Additionally, for comprehensive examples on the usage of qexp and pexp, refer to: https://mathdistops.readthedocs.io/en/latest/example_exp.html.
 
 ## Python Ecosystem Integration
 While python has relevant functions for normal and exponential distribution in the scipy.stats package, this package offer an in-built additional functionality of returning the plot to help with visualization and understanding the problem. 
