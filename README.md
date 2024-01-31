@@ -108,7 +108,11 @@ This package necessitates a Python version of 3 or higher. Additional required p
 
 ## Contributing
 
-Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms.
+Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code of Conduct. By contributing to this project, you agree to abide by its terms. (https://github.com/UBC-MDS/mathdistops/blob/main/CONTRIBUTING.md)
+
+## Code of Conduct
+
+Welcome to our project! We appreciate your interest in contributing. Please follow our code of conduct.(https://github.com/UBC-MDS/mathdistops/blob/main/CONDUCT.md)
 
 ## License
 
