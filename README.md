@@ -21,32 +21,38 @@ Our team listed in alphabetical order:
 - Sandra Gross
 
 ## Installation
-This package uses [Poetry](https://python-poetry.org/) for dependency management and packaging. It is not yet available for installation via `pip`. To install and use this package, please follow these steps:
 
-1. **Install Poetry and Conda**: If you don't have Poetry or Conda installed, install them by following the official installation guide for [Poetry](https://python-poetry.org/docs/#installation) and [Conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html).
+### For Users
+In order to install the package you can run the command `pip install mathdistops`.
 
-2. **Clone the Repository**: Clone this repository to your local machine.
+### For Developers
+This package uses [Poetry](https://python-poetry.org/) for dependency management and packaging. To install and use this package, please follow these steps:
+
+1. To **create a new virtual environment** in Conda with Python, use the following commands in the terminal: 
+
+```bash
+conda create --name mathdistops python=3.9.0 -y
+```
+
+2. **Activate the installed environment** via: 
+
+```bash
+conda activate mathdistops
+```
+
+3. Please **install** and set up **poetry**:
 
     ```bash
-    git clone https://github.com/UBC-MDS/mathdistops.git
-    cd mathdistops
+    conda install poetry
     ```
-3. **Install the virtual environment**:
 
-   ```bash
-    conda env create -f environment.yaml
-    ```
-4. **Activate the installed environment**:
-
-   ```bash
-    conda activate mathdistops
-   ```
-
-5. **Install the Package with Poetry**: Use Poetry to install the package and its dependencies.
+4. **Install the Package with Poetry**: Use Poetry to install the package and its dependencies.
 
     ```bash
     poetry install
     ```
+
+5. Now you are ready to use the mathdistops package!
 
 ## Usage
 
@@ -91,8 +97,10 @@ To get a the code coverage reporting, run this command:
 
 - qnorm(p, mean=0, std_dev=1, graph=True): Calculates the quantile (Inverse Cumulative Distribution Function) corresponding to a specified cumulative probability `p` of the normal distribution with specified mean and standard deviation. The function can additionally create and provide a graphical representation of the PDF and the CDF.
 
+A detailed documentation of the functions can be found here: https://mathdistops.readthedocs.io/en/latest/autoapi/index.html
+
 ### Documentation
-A comprehensive guide and tutorial on utilizing these functions are available on ReadTheDocs. To access it, click the "docs" button located at the top of the README.
+A detailed guide and tutorial for using these functions can be found on ReadTheDocs. For specific vignettes on the norm functions, please visit: https://mathdistops.readthedocs.io/en/latest/example_norm.html. Additionally, for comprehensive examples on the usage of qexp and pexp, refer to: https://mathdistops.readthedocs.io/en/latest/example_exp.html.
 
 ## Python Ecosystem Integration
 While python has relevant functions for normal and exponential distribution in the scipy.stats package, this package offer an in-built additional functionality of returning the plot to help with visualization and understanding the problem. 
