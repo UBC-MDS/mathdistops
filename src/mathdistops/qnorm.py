@@ -57,50 +57,50 @@ def qnorm(p, mean=0, std_dev=1, graph=True):
     
     results_df = pd.DataFrame({'Quantile': [q]})
     
-    x_values = np.linspace(mean - 3 * std_dev, mean + 3 * std_dev, 100)
-    y_values_pdf = stats.norm.pdf(x_values, mean, std_dev)
-    y_values_cdf = stats.norm.cdf(x_values, mean, std_dev)
-    data = {'x': x_values, 'pdf': y_values_pdf, 'cdf': y_values_cdf, 'q': q}
-    df = pd.DataFrame(data)
-    
-    # PDF
-    chart = alt.Chart(df).mark_line().encode(
-        x='x',
-        y='pdf'
-    )
-    
-    #Add a shaded area under the curve ()
-    shade_area = alt.Chart(df, title=f"Probability Density Function for p = {prob:.4g}, mean = {mean:.4g}, sd = {std_dev:.4g}").mark_area(opacity=0.3, color='lightblue').encode(
-        x=alt.X('x', title='X'),
-        y=alt.Y('pdf', title='f(X)')
-    ).transform_filter(
-        alt.datum.x <= x  
-    )
-    
-    # Add vertical line at respective quantile 
-    vertline = alt.Chart(pd.DataFrame({'z': [q]})).mark_rule(strokeDash=[3, 3]).encode(
-        x='z'
-    )
-    #CDF
-    cdf_chart = alt.Chart(df, title=f"Cumulative Distribution Chart for p = {prob:.4g}, mean = {mean:.4g}, sd = {std_dev:.4g}").mark_line().encode(
-        x=alt.X('x').title("x"),
-        y=alt.Y('cdf').title('probability'),
-        color=alt.value('orange'),
-        opacity=alt.value(0.5),
-    ).properties(
-        width=300,
-        height=300
-    )
+    if graph:
+        x_values = np.linspace(mean - 3 * std_dev, mean + 3 * std_dev, 100)
+        y_values_pdf = stats.norm.pdf(x_values, mean, std_dev)
+        y_values_cdf = stats.norm.cdf(x_values, mean, std_dev)
+        data = {'x': x_values, 'pdf': y_values_pdf, 'cdf': y_values_cdf, 'q': q}
+        df = pd.DataFrame(data)
+        
+        # PDF
+        chart = alt.Chart(df).mark_line().encode(
+            x='x',
+            y='pdf'
+        )
+        
+        #Add a shaded area under the curve ()
+        shade_area = alt.Chart(df, title=f"Probability Density Function for p = {prob:.4g}, mean = {mean:.4g}, sd = {std_dev:.4g}").mark_area(opacity=0.3, color='lightblue').encode(
+            x=alt.X('x', title='X'),
+            y=alt.Y('pdf', title='f(X)')
+        ).transform_filter(
+            alt.datum.x <= x  
+        )
+        
+        # Add vertical line at respective quantile 
+        vertline = alt.Chart(pd.DataFrame({'z': [q]})).mark_rule(strokeDash=[3, 3]).encode(
+            x='z'
+        )
+        #CDF
+        cdf_chart = alt.Chart(df, title=f"Cumulative Distribution Chart for p = {prob:.4g}, mean = {mean:.4g}, sd = {std_dev:.4g}").mark_line().encode(
+            x=alt.X('x').title("x"),
+            y=alt.Y('cdf').title('probability'),
+            color=alt.value('orange'),
+            opacity=alt.value(0.5),
+        ).properties(
+            width=300,
+            height=300
+        )
 
-    horizontalline = alt.Chart(pd.DataFrame({'p': [prob]})).mark_rule(strokeDash=[3, 3]).encode(
-        y='p'
-    )
-    
-    # Combine all plots
-    result_graph = (shade_area + chart + vertline) |(cdf_chart + vertline + horizontalline)
+        horizontalline = alt.Chart(pd.DataFrame({'p': [prob]})).mark_rule(strokeDash=[3, 3]).encode(
+            y='p'
+        )
+        
+        # Combine all plots
+        result_graph = (shade_area + chart + vertline) |(cdf_chart + vertline + horizontalline)
 
-    if graph == True: 
         return results_df, result_graph
-    else:
-        return results_df
+    
+    return results_df
     
