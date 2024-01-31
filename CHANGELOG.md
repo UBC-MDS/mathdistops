@@ -2,6 +2,47 @@
 
 
 
+## v2.0.4 (2024-01-31)
+
+### Fix
+
+* fix: polish norm function dogstring format ([`a4a1fe6`](https://github.com/UBC-MDS/mathdistops/commit/a4a1fe6713b1f3b444b8bec9512583696524d395))
+
+* fix: Feedback addressed by adding more usage example on readme file ([`4a76331`](https://github.com/UBC-MDS/mathdistops/commit/4a76331870c25d7d36354aa9490f7e58fb2163a5))
+
+### Unknown
+
+* Merge pull request #123 from UBC-MDS/func-polish
+
+fix: Feedback addressed by adding more usage example on readme file ([`d7dfd3a`](https://github.com/UBC-MDS/mathdistops/commit/d7dfd3aeae52e74337f3c6bd28d4bcfd9b078ee6))
+
+* Fix: indentation on README.md ([`94b91e3`](https://github.com/UBC-MDS/mathdistops/commit/94b91e3ca9658e0909ce64389303da7f7be63ffa))
+
+* Fix: Update README with pytest instructions ([`86c11de`](https://github.com/UBC-MDS/mathdistops/commit/86c11deb2c2043d4dc43245c318c981da57fef68))
+
+* Merge pull request #109 from UBC-MDS/README_update
+
+Fix: Feedback addressed by adding link to vignettes and the documenta… ([`b6935aa`](https://github.com/UBC-MDS/mathdistops/commit/b6935aa700cec53c2cf016cb27b7fbc155e78f10))
+
+* Merge pull request #118 from UBC-MDS/func-polish
+
+Function polish ([`6c5efcf`](https://github.com/UBC-MDS/mathdistops/commit/6c5efcf2f9036d60ef9015808cae9acd234ecbb1))
+
+* Merge branch &#39;main&#39; into func-polish ([`37d3a8e`](https://github.com/UBC-MDS/mathdistops/commit/37d3a8eedaac910bb50b29c6780297cf1244a4d6))
+
+* fix link bug on readme file ([`9c23611`](https://github.com/UBC-MDS/mathdistops/commit/9c2361110ae7392c6217a2591896a1769279393c))
+
+* Fix: Feedback addressed by adding more usage example on readme file ([`14b6b71`](https://github.com/UBC-MDS/mathdistops/commit/14b6b71ec055f4427b44e41a226fd133d52d0d08))
+
+* Merge pull request #120 from UBC-MDS/raise_docstring
+
+update form on pnorm/qnorm ([`87f2a2c`](https://github.com/UBC-MDS/mathdistops/commit/87f2a2c1f4a36f4ef6806312f7da34fb2d3936c9))
+
+* update form ([`e7c307b`](https://github.com/UBC-MDS/mathdistops/commit/e7c307ba1d9619c9f2f3c992aaedd1e63e4948d0))
+
+* Fix: Feedback addressed by editing the example in dogstring to match the output the function generate ([`e86e0ad`](https://github.com/UBC-MDS/mathdistops/commit/e86e0ad695f7b4af16c69fd44e1fd73729c9f960))
+
+
 ## v2.0.3 (2024-01-31)
 
 ### Fix
@@ -16,9 +57,13 @@
 
 Hyperlink was added to Contributing file and code of conduct, Please review. ([`02c72c0`](https://github.com/UBC-MDS/mathdistops/commit/02c72c0b168c2fbf64c2bbe080105621baf46e66))
 
+* Fix: Feedback addressed by adding condiction to generate graph only when graph=True ([`3271dcd`](https://github.com/UBC-MDS/mathdistops/commit/3271dcdc05f5d91f933bf8bd7df3203f5d8e3c87))
+
 * fix typo ([`2140603`](https://github.com/UBC-MDS/mathdistops/commit/2140603f9250e863dfc1e30dceb6604a703a50d5))
 
 * Fix: Remove Dollar symbols on  README.md ([`1fd61d2`](https://github.com/UBC-MDS/mathdistops/commit/1fd61d20a755e38456d59c3da278a9bf1b01577a))
+
+* Fix: Feedback addressed by adding link to vignettes and the documentation on READTHEDOCS as well as updating the installation instructions ([`a47e046`](https://github.com/UBC-MDS/mathdistops/commit/a47e04680483816f02c3eac263d434726e58c3c1))
 
 
 ## v2.0.2 (2024-01-30)
