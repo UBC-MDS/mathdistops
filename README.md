@@ -58,15 +58,15 @@ conda activate mathdistops
 
 3. Please **install** and set up **poetry**:
 
-    ```bash
-    conda install poetry
-    ```
+```bash
+conda install poetry
+```
 
 4. **Install the Package with Poetry**: Use Poetry to install the package and its dependencies.
 
-    ```bash
-    poetry install
-    ```
+```bash
+poetry install
+```
 
 5. Now you are ready to use the mathdistops package!
 
