@@ -15,7 +15,7 @@ def qexp(p, rate=1, graph=True):
     ----------
     p : float, optional
         The cumulative probability for which to find the quantile.
-        Must be between 0 and 1, exclusive of 1. Default is 0.5.
+        Must be between 0 and 1, exclusive of 1. 
     rate : float
         The rate parameter (`lambda`) of the exponential distribution. Must be a positive number. Default is 1
     graph : bool, optional
@@ -35,9 +35,6 @@ def qexp(p, rate=1, graph=True):
         Probability     Quantile
     0   0.5             0.6931471805599453
     """
-
-    if p is None:
-        raise ValueError("Parameter 'p' is required.")
     if not 0 <= p < 1:
         raise ValueError("Cumulative probability must be between 0 and 1, exclusive of 1")
     if rate <= 0:

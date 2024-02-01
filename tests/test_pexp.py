@@ -49,8 +49,8 @@ def test_nonsensical_input_pexp():
     assert str(custom_string.value) == "Input parameters must be numerical."
 
     with pytest.raises(ValueError) as custom_string:
-        results = pexp(None)
-    assert str(custom_string.value) == "Parameter 'q' is required."
+        results = pexp(-5)
+    assert str(custom_string.value) == "Quantile 'q' should not be below zero"
 
 def test_figure_components_pexp():
     """

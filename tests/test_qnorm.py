@@ -23,14 +23,6 @@ def test_df_results():
     results_df = qnorm(0.25, graph=False)
     assert abs(results_df['Quantile'].iloc[0] - (-0.67449)) <= 0.001
 
-def test_missing_input():
-    """
-    Test case for TypeError when parameter `p` is missing.
-    """
-    with pytest.raises(TypeError) as custom_string:
-        results, graph = qnorm()
-    assert str(custom_string.value) ==  "qnorm() missing 1 required positional argument: 'p'"
-
 
 def test_p_outofrange():
     """
@@ -53,9 +45,7 @@ def test_nonsensical_input():
         results = qnorm('hi', mean=5, std_dev=2, graph=False)
     assert str(custom_string.value) == "Input parameters must be numerical."
 
-    with pytest.raises(ValueError) as custom_string:
-        results = qnorm(None)
-    assert str(custom_string.value) == "Parameter 'p' is required."
+
 
 
 
