@@ -2,6 +2,31 @@
 
 
 
+## v2.0.5 (2024-02-01)
+
+### Fix
+
+* fix: Feedback addressed by adding more badges ([`0bd6ed4`](https://github.com/UBC-MDS/mathdistops/commit/0bd6ed4fdf1383be0fe20616f055eabf909ed277))
+
+### Unknown
+
+* Merge pull request #125 from UBC-MDS/func-polish
+
+fix: Feedback addressed by adding more badges ([`3b7c600`](https://github.com/UBC-MDS/mathdistops/commit/3b7c60081acd4f58b02e62244e6393ad9ff53b0f))
+
+* Merge pull request #122 from UBC-MDS/milestone3_feedback
+
+Milestone3 feedback ([`b83cc7e`](https://github.com/UBC-MDS/mathdistops/commit/b83cc7edce25bf1ec3597b07d93d3b19e30feb43))
+
+* Fix: Further adaptions to the tests ([`ce4a0ef`](https://github.com/UBC-MDS/mathdistops/commit/ce4a0ef733817eac9e54081ddec34d9ab74dec03))
+
+* Fix: Feedback addressed by adapting tests ot fucntion arguments ([`6444686`](https://github.com/UBC-MDS/mathdistops/commit/6444686e8487440ce87e0c36a53f7589eec3bf55))
+
+* Fix: Feedback addressed by stressing its integration into Python Ecosystem ([`6d22708`](https://github.com/UBC-MDS/mathdistops/commit/6d22708f7290576a1f97d8301308e65aaf654c78))
+
+* Fix: Update README.md with a more specific README description ([`e877159`](https://github.com/UBC-MDS/mathdistops/commit/e877159dcc1abdf4e68c5a5322d754fdf4bbb044))
+
+
 ## v2.0.4 (2024-01-31)
 
 ### Fix
@@ -19,6 +44,10 @@ fix: Feedback addressed by adding more usage example on readme file ([`d7dfd3a`]
 * Fix: indentation on README.md ([`94b91e3`](https://github.com/UBC-MDS/mathdistops/commit/94b91e3ca9658e0909ce64389303da7f7be63ffa))
 
 * Fix: Update README with pytest instructions ([`86c11de`](https://github.com/UBC-MDS/mathdistops/commit/86c11deb2c2043d4dc43245c318c981da57fef68))
+
+* Fix: Feedback addressed by handling edge case of q&lt;0 in pexp ([`a59c4b3`](https://github.com/UBC-MDS/mathdistops/commit/a59c4b3dbe9da9de73a4ee78e361cad7d92f332c))
+
+* Fix: Feedback of milestone2 addressed by changing docstring and correctly show the default of the arguments ([`d457fe1`](https://github.com/UBC-MDS/mathdistops/commit/d457fe14480f6d5d3bcfc602af7b93d8f2ac4ce6))
 
 * Merge pull request #109 from UBC-MDS/README_update
 
