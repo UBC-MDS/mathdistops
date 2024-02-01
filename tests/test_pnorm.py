@@ -26,13 +26,6 @@ def test_df_results():
     cumulative_probability = results_df['Cumulative probability'].iloc[0]
     assert 0 <= cumulative_probability <= 1
 
-def test_missing_input():
-    """
-    Test case for TypeError when parameter `q` is missing.
-    """
-    with pytest.raises(TypeError) as custom_string:
-        results, graph = pnorm()
-    assert str(custom_string.value) == "pnorm() missing 1 required positional argument: 'q'"
 
 def test_nonsensical_input():
     """

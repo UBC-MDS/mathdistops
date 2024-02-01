@@ -33,21 +33,20 @@ def pexp(q, rate=1, graph=True):
         Quantile    Cumulative probability
     0   0.5         0.393469
     """
-    if q is None:
-        raise ValueError("Parameter 'q' is required.")
 
     if rate <= 0:
         raise ValueError("Rate cannot be zero or negative.")
 
     if not isinstance(q, (int, float)) or not isinstance(rate, (int, float)):
         raise TypeError("Input parameters must be numerical.")
+    
+    if q < 0:
+        raise ValueError("Quantile 'q' should not be below zero")
         
     # Calculate cumulative probability
-    if q >= 0:
-        prob = 1 - math.exp(-rate * q)
-        results_df = pd.DataFrame({'Quantile': [q], 'Cumulative probability': [prob]})
-    if q < 0:
-        results_df = pd.DataFrame({'Quantile': [q], 'Cumulative probability': 0})
+
+    prob = 1 - math.exp(-rate * q)
+    results_df = pd.DataFrame({'Quantile': [q], 'Cumulative probability': [prob]})
 
     if graph:
         x_values = np.linspace(0, q + 3 / rate, 1000)

@@ -46,9 +46,6 @@ def qnorm(p, mean=0, std_dev=1, graph=True):
         Quantile
     0   1.0
     """
-    
-    if p is None:
-        raise ValueError("Parameter 'p' is required.")
 
     if not all(isinstance(param, (int, float)) for param in [p, mean, std_dev]):
         raise TypeError("Input parameters must be numerical.")

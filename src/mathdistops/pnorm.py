@@ -42,8 +42,6 @@ def pnorm(q, mean = 0, std_dev =1, graph = True):
         Z-score    Cumulative probability 
     0   1.0        0.8413447460685429
     """
-    if q is None:
-        raise ValueError("Parameter 'q' is required.")
 
     if std_dev <= 0:
         raise ValueError("Standard deviation cannot be zero or negative.")
