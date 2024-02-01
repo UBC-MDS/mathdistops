@@ -29,6 +29,12 @@ def qexp(p, rate=1, graph=True):
         cumulative probability and the quantile as well as a layered altair Chart consisting of two graphs, CDF and PDF.
         If `graph` is False, returns a pandas DataFrame.
 
+    Raises
+    ------
+    ValueError:
+        If the cumulative probability 'p' is not between 0 and 1, exclusive of 1.
+        If the rate parameter 'rate' is not a positive number.
+
     Examples
     --------
     >>> qexp(0.5, rate=1, graph=False)

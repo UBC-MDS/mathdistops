@@ -28,6 +28,13 @@ def pnorm(q, mean = 0, std_dev =1, graph = True):
             layered altair Chart consisting of two graphs, CDF and PDF.
         If `graph` is False, returns a pandas DataFrame.
 
+    Raises
+    ------
+    ValueError:
+        If 'std_dev' is zero or negative, as the standard deviation must be a positive number.
+    TypeError:
+        If any of the input parameters ('q', 'mean', 'std_dev') are not numerical.
+
     Example
     --------
     >>> pnorm(1, mean=0, std_dev=1, graph=False)
