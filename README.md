@@ -132,9 +132,12 @@ poetry run pytest --cov-branch --cov=mathdistops
 ## Python Ecosystem Integration
 While python has relevant functions for normal and exponential distribution in the scipy.stats package, this package offer an in-built additional functionality of returning the plot to help with visualization and understanding the problem. 
 
+
 ### Related Packages:
 - [scipy.stats.norm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html) is an official scipy package to represent a normal continuous random variable.
 - [scipy.stats.expon](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.expon.html) is an official scipy package to represent an exponential continuous random variable.
+
+However, these functions do not inherently produce visual outputs, requiring additional steps with a plotting library like Matplotlib for visualization. This stresses the unique selling point of the `mathidistops`, which is its ability to encapsulate both the computational and visual aspects of statistical analysis into cohesive functions tailored for normal and exponential distributions. 
 
 ## Dependencies
 
