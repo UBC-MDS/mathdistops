@@ -11,7 +11,9 @@ This package provides statistical functions for normal and exponential distribut
 [![Documentation Status](https://readthedocs.org/projects/mathdistops/badge/?version=latest)](https://mathdistops.readthedocs.io/en/latest/?badge=latest)
 ![codesize](https://img.shields.io/github/languages/code-size/UBC-MDS/MathDistOps)
 [![version](https://img.shields.io/github/v/release/UBC-MDS/mathdistops)](https://github.com/UBC-MDS/mathdistops/releases)
+[![release](https://img.shields.io/github/release-date/UBC-MDS/mathdistops)](https://github.com/UBC-MDS/mathdistops/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 ## Contributors
 Our team listed in alphabetical order:
