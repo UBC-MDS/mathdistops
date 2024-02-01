@@ -42,7 +42,11 @@ A detailed guide and tutorial for using these functions can be found on ReadTheD
 ## Installation
 
 ### For Users
-In order to install the package you can run the command `pip install mathdistops`.
+In order to install the package you can run the following command from the terminal:
+
+```bash
+pip install mathdistops
+```
 
 ### For Developers
 This package uses [Poetry](https://python-poetry.org/) for dependency management and packaging. To install and use this package, please follow these steps:
