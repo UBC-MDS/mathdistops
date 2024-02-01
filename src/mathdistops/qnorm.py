@@ -28,6 +28,14 @@ def qnorm(p, mean=0, std_dev=1, graph=True):
             layered altair Chart consisting of two graphs, CDF and PDF.
         If `graph` is False, returns a pandas DataFrame.
 
+    Raises
+    ------
+    TypeError:
+        If any of the input parameters ('p', 'mean', 'std_dev') are not numerical.
+    ValueError:
+        If 'p' is not within the range [0, 1].
+        If 'std_dev' is zero or negative, as standard deviation must be positive.
+
     Example
     -------
     >>> qnorm(0.8413447460685429, mean=0, std_dev=1, graph=False)

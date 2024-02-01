@@ -27,6 +27,14 @@ def pexp(q, rate=1, graph=True):
             layered altair Chart consisting of two graphs, CDF and PDF.
         If `graph` is False, returns a pandas DataFrame.
 
+    Raises
+    ------
+    ValueError:
+        If 'q' is None, indicating that the quantile parameter is missing.
+        If 'rate' is zero or negative, indicating an invalid rate parameter.
+    TypeError:
+        If either 'q' or 'rate' is not a numerical value.
+
     Examples
     --------
     >>> pexp(0.5, rate=1, graph=False)
