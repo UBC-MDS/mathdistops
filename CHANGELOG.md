@@ -2,6 +2,23 @@
 
 
 
+## v2.0.6 (2024-02-01)
+
+### Fix
+
+* fix: added raise section into docstring ([`faa65e3`](https://github.com/UBC-MDS/mathdistops/commit/faa65e38117463aaa9872ec313e9fc2a21ea5fd6))
+
+### Unknown
+
+* Merge pull request #128 from UBC-MDS/raise_docstring
+
+fix: added raise section into docstring ([`9b37fb6`](https://github.com/UBC-MDS/mathdistops/commit/9b37fb6d77ada95331cbd0f1dd54adefa53e25af))
+
+* Correct Spelling error in README ([`04fcc0b`](https://github.com/UBC-MDS/mathdistops/commit/04fcc0bfa2cd052b441016e324e107ca61015e23))
+
+* Update README.md ([`54cf09e`](https://github.com/UBC-MDS/mathdistops/commit/54cf09e668c956ed130ac67178c5d58f87e5275d))
+
+
 ## v2.0.5 (2024-02-01)
 
 ### Fix
