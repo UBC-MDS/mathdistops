@@ -83,7 +83,6 @@ def test_figure_components_pexp():
     ------
     AssertionError:
         If expected components (PDF line, CDF line, vertical line, shaded area) are not found in the charts.
-
     """
     _, graph = pexp(1.5, rate=1)
     graph_dict = graph.to_dict()

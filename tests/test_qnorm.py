@@ -26,6 +26,11 @@ def test_df_results():
 def test_missing_input():
     """
     Test case for TypeError when parameter `p` is missing.
+
+    Raises
+    ------
+    TypeError: 
+        If the required parameter 'p' is not provided to the `qnorm` function.
     """
     with pytest.raises(TypeError) as custom_string:
         results, graph = qnorm()
@@ -35,6 +40,11 @@ def test_missing_input():
 def test_p_outofrange():
     """
     Test case for ValueError when parameter `p` is out of range.
+
+    Raises
+    ------
+    ValueError: 
+        If the probability parameter 'p' is not within the range of 0 to 1.
     """
     with pytest.raises(ValueError) as custom_string:
         results, graph = qnorm(5)
@@ -44,6 +54,13 @@ def test_p_outofrange():
 def test_nonsensical_input():
     """
     Test case for ValueError and Type Error in case of incorrect user input, e.g. negative standard deviation or non numerical value.
+
+    Raises
+    ------
+    ValueError: 
+        If 'std_dev' is zero or negative, or if 'p' is None.
+    TypeError: 
+        If the input parameters ('p', 'mean', 'std_dev') are not numerical.
     """
     with pytest.raises(ValueError) as custom_string:
         results = qnorm(0.3, mean=5, std_dev=-2, graph=False)

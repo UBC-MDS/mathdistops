@@ -26,6 +26,11 @@ def test_output_datatypes():
 def test_invalid_probability_input():
     """
     Tests function's response to invalid probability values, including the edge case of p=1 and p=None.
+
+    Raises
+    ------
+    ValueError: 
+        If the cumulative probability 'p' is not between 0 and 1, exclusive of 1, or if 'p' is None.  
     """
     with pytest.raises(ValueError) as custom_string:
         results = qexp(None)
@@ -47,6 +52,11 @@ def test_invalid_probability_input():
 def test_missing_input():
     """
     Test case for TypeError when parameter `p` is missing.
+
+    Raises
+    ------
+    TypeError: 
+        If the required parameter 'p' is not provided to the `qexp` function.
     """
     with pytest.raises(TypeError) as custom_string:
         results, graph = qexp()
@@ -55,6 +65,11 @@ def test_missing_input():
 def test_invalid_rate_input():
     """
     Tests function's response to invalid rate values.
+
+    Raises
+    ------
+    ValueError: 
+        If the rate parameter is not a positive number.
     """
     with pytest.raises(ValueError) as excinfo:
         qexp(0.5, 0)
