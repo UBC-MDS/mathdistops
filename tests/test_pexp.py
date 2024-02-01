@@ -7,6 +7,11 @@ import math
 def test_output_datatype_pexp():
     """
     Tests whether the pexp function returns correct output data types 
+
+    Raises
+    ------
+    AssertionError: 
+        If the output types do not match the expected types.
     """
     results, graph = pexp(1.5, rate=1)
     assert isinstance(results, pd.DataFrame), "Expected DataFrame output for results"
@@ -16,6 +21,11 @@ def test_output_datatype_pexp():
 def test_df_results_pexp():
     """
     Tests whether the pexp function calculates the cumulative probability value correctly
+
+    Raises
+    ------
+    AssertionError: 
+        If the DataFrame shape or calculated probability values are incorrect.
     """
     results = pexp(1, rate=1, graph=False)
     expected_probability = 1 - math.exp(-1)
@@ -31,6 +41,11 @@ def test_df_results_pexp():
 def test_missing_input_pexp():
     """
     Test case for TypeError when parameter `q` is missing in pexp.
+
+    Raises
+    ------
+    TypeError: 
+        If the required positional argument 'q' is missing.
     """
     with pytest.raises(TypeError) as custom_string:
         results, graph = pexp()
@@ -39,6 +54,14 @@ def test_missing_input_pexp():
 def test_nonsensical_input_pexp():
     """
     Test case for ValueError and TypeError in case of incorrect user input for pexp, e.g. negative rate or non-numerical value.
+
+    Raises
+    ------
+    ValueError: 
+        If the rate is zero or negative, or if 'q' is not provided.
+    TypeError:
+        If the input parameters are not numerical.
+
     """
     with pytest.raises(ValueError) as custom_string:
         results = pexp(3, rate=-1, graph=False)
@@ -55,6 +78,12 @@ def test_nonsensical_input_pexp():
 def test_figure_components_pexp():
     """
     Tests whether the pexp function creates figures with the correct components.
+
+    Raises
+    ------
+    AssertionError:
+        If expected components (PDF line, CDF line, vertical line, shaded area) are not found in the charts.
+
     """
     _, graph = pexp(1.5, rate=1)
     graph_dict = graph.to_dict()
@@ -92,6 +121,11 @@ def test_figure_components_pexp():
 def test_figure_properties_pexp():
     """
     Tests specific properties of the figures created by the pexp function.
+
+    Raises
+    ------
+    AssertionError:
+        If the titles of the PDF or CDF charts do not match the expected titles.
     """
     _, graph = pexp(1.5, rate=1)
     charts = graph.to_dict()['hconcat']

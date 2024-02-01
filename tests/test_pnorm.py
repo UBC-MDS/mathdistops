@@ -29,6 +29,11 @@ def test_df_results():
 def test_missing_input():
     """
     Test case for TypeError when parameter `q` is missing.
+
+    Raises
+    ------
+        TypeError: If the required parameter `q` is not provided to the `pnorm` function.
+
     """
     with pytest.raises(TypeError) as custom_string:
         results, graph = pnorm()
@@ -37,6 +42,12 @@ def test_missing_input():
 def test_nonsensical_input():
     """
     Test case for ValueError and Type Error in case of incorrect user input, e.g. negative standard deviation or non numerical value
+
+    Raises
+    ------
+        ValueError: If 'std_dev' is zero or negative, or if 'q' is None.
+        TypeError: If the input parameters ('q', 'mean', 'std_dev') are not numerical.
+        
     """
     with pytest.raises(ValueError) as custom_string:
         results = pnorm(3, mean=5, std_dev=-2, graph=False)
