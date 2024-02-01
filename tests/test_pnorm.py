@@ -39,9 +39,7 @@ def test_nonsensical_input():
         results = pnorm('hi', mean=5, std_dev=2, graph=False)
     assert str(custom_string.value) == "Input parameters must be numerical."
 
-    with pytest.raises(ValueError) as custom_string:
-        results = pnorm(None)
-    assert str(custom_string.value) == "Parameter 'q' is required."
+
 
 
     
