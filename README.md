@@ -33,7 +33,7 @@ Our team listed in alphabetical order:
 
 - qnorm(p, mean=0, std_dev=1, graph=True): Calculates the quantile (Inverse Cumulative Distribution Function) corresponding to a specified cumulative probability `p` of the normal distribution with specified mean and standard deviation. The function can additionally create and provide a graphical representation of the PDF and the CDF.
 
-A detailed documentation of the functions can be found here: https://mathdistops.readthedocs.io/en/latest/autoapi/index.html
+A detailed documentation of the functions can be found [here](https://mathdistops.readthedocs.io/en/latest/autoapi/index.html).
 
 ### Documentation
 A detailed guide and tutorial for using these functions can be found on ReadTheDocs. For specific vignettes on the norm functions, please visit: https://mathdistops.readthedocs.io/en/latest/example_norm.html. Additionally, for comprehensive examples on the usage of qexp and pexp, refer to: https://mathdistops.readthedocs.io/en/latest/example_exp.html.
