@@ -2,11 +2,30 @@
 
 
 
+## v2.0.7 (2024-02-02)
+
+### Fix
+
+* fix: typo ([`17779d9`](https://github.com/UBC-MDS/mathdistops/commit/17779d96c8661494cff17478cc200ce85b0800eb))
+
+* fix: give explanation of why not median ([`6551092`](https://github.com/UBC-MDS/mathdistops/commit/655109269ac64603ed72136bfb07c3cfd9c7fda2))
+
+### Unknown
+
+* Merge pull request #127 from UBC-MDS/explain_median
+
+fix: Feedback addressed by explaining why not median ([`40c5b39`](https://github.com/UBC-MDS/mathdistops/commit/40c5b3946e045a05ee737f81b25d4a2779e222ec))
+
+* Fix: Update qexp.py doctoring ([`18c07d8`](https://github.com/UBC-MDS/mathdistops/commit/18c07d82ca90f60d6fcb4d52d5520698e35d95c1))
+
+
 ## v2.0.6 (2024-02-01)
 
 ### Fix
 
 * fix: added raise section into docstring ([`faa65e3`](https://github.com/UBC-MDS/mathdistops/commit/faa65e38117463aaa9872ec313e9fc2a21ea5fd6))
+
+* fix: Feedback addressed by explaining why not median ([`62e9f77`](https://github.com/UBC-MDS/mathdistops/commit/62e9f7756cbc6374f1fd6ca418b869b71726de79))
 
 ### Unknown
 
