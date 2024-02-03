@@ -2,6 +2,27 @@
 
 
 
+## v3.0.0 (2024-02-03)
+
+### Breaking
+
+* feat!: Milestone 4 Major Patch Update
+
+BREAKING CHANGES: Artificial change to pushed to version 3.0.0 ([`b561d3f`](https://github.com/UBC-MDS/mathdistops/commit/b561d3f68e213c60f5696c673e43eb0d18ef2048))
+
+### Unknown
+
+* Merge pull request #130 from UBC-MDS/milestone4-1
+
+feat!: Milestone 4 Major Patch Update ([`901c68a`](https://github.com/UBC-MDS/mathdistops/commit/901c68a7cdd49b4b1944262de9f4914167a33211))
+
+* Merge pull request #129 from UBC-MDS/release
+
+BREAKING CHANGE: Set ci-cd and address feedback from milestone &amp; peer… ([`8ca0364`](https://github.com/UBC-MDS/mathdistops/commit/8ca0364d99f0847a3b35b916c81a77143769d9f1))
+
+* BREAKING CHANGE: Set ci-cd and address feedback from milestone &amp; peer review ([`92ad4bd`](https://github.com/UBC-MDS/mathdistops/commit/92ad4bd446c1a3aa01fc6ef7f77feb7ad0d7199d))
+
+
 ## v2.0.7 (2024-02-02)
 
 ### Fix
