@@ -163,4 +163,4 @@ Welcome to our project! We appreciate your interest in contributing. Please foll
 
 ## Credits
 
-`mathdistops` was created with a template tool [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+`mathdistops` was created with a template tool [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter). 
